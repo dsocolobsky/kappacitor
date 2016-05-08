@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-
     Animator animator;
     string previousAnimation;
 
@@ -49,7 +48,8 @@ public class Player : MonoBehaviour
                 previousAnimation = "capacitor_down";
             }
         }
-        else if (vertical == 1) {
+        else if (vertical == 1)
+        {
             if (horizontal == -1)
             {
                 animator.Play("capacitor_upleft");
@@ -64,7 +64,8 @@ public class Player : MonoBehaviour
                 animator.Play("capacitor_up");
                 previousAnimation = "capacitor_up";
             }
-        } else
+        }
+        else
         {
             if (horizontal == -1)
             {
