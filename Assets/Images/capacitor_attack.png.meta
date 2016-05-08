@@ -1,0 +1,489 @@
+fileFormatVersion: 2
+guid: 32c4cb7d030d07a40905f691ce5b9965
+timeCreated: 1462661375
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: capacitor_attack_0
+    21300002: capacitor_attack_1
+    21300004: capacitor_attack_2
+    21300006: capacitor_attack_3
+    21300008: capacitor_attack_4
+    21300010: capacitor_attack_5
+    21300012: capacitor_attack_6
+    21300014: capacitor_attack_7
+    21300016: capacitor_attack_8
+    21300018: capacitor_attack_9
+    21300020: capacitor_attack_10
+    21300022: capacitor_attack_11
+    21300024: capacitor_attack_12
+    21300026: capacitor_attack_13
+    21300028: capacitor_attack_14
+    21300030: capacitor_attack_15
+    21300032: capacitor_attack_16
+    21300034: capacitor_attack_17
+    21300036: capacitor_attack_18
+    21300038: capacitor_attack_19
+    21300040: capacitor_attack_20
+    21300042: capacitor_attack_21
+    21300044: capacitor_attack_22
+    21300046: capacitor_attack_23
+    21300048: capacitor_attack_24
+    21300050: capacitor_attack_25
+    21300052: capacitor_attack_26
+    21300054: capacitor_attack_27
+    21300056: capacitor_attack_28
+    21300058: capacitor_attack_29
+    21300060: capacitor_attack_30
+    21300062: capacitor_attack_31
+    21300064: capacitor_attack_32
+    21300066: capacitor_attack_33
+    21300068: capacitor_attack_34
+    21300070: capacitor_attack_35
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: capacitor_attack_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 34
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 34
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 34
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_3
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 34
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 34
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 34
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 34
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_7
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 34
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 34
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_9
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 34
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_10
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 34
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_11
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 34
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_12
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 34
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_13
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 34
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_14
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 34
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_15
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 34
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_16
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 34
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_17
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 34
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_18
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 34
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_19
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 34
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_20
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 34
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_21
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 34
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_22
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 34
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_23
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 34
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_24
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 34
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_25
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 34
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_26
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 34
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_27
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_28
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 3
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_29
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 3
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_30
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 3
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_31
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 3
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_32
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_33
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 3
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_34
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 3
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: capacitor_attack_35
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
