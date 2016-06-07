@@ -3,13 +3,12 @@ using System.Collections;
 
 public class Wander : MonoBehaviour
 {
-
     Vector3 target;
     Vector3 anchor;
     Vector3 direction;
     public float circleRadius;
 
-    public GameObject player;
+    GameObject player;
 
     public bool detectedPlayer { get; private set; }
     public float speed;
@@ -56,7 +55,9 @@ public class Wander : MonoBehaviour
         Gizmos.color = new Color(0, 1, 0, 0.25f);
         Gizmos.DrawSphere(target, circleRadius * 0.05f);
         Gizmos.color = detectedPlayer ? Color.red : Color.cyan;
-        Gizmos.DrawRay(transform.position, player.transform.position - transform.position);
+
+        if (player)
+            Gizmos.DrawRay(transform.position, player.transform.position - transform.position);
     }
 
     Vector3 newTarget()
