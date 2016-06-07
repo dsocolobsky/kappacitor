@@ -16,9 +16,7 @@ public class FlipWithMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos = Input.mousePosition;
-        Vector2 distance = mousePos - Camera.main.WorldToScreenPoint(transform.position);
-        float angle = Mathf.Atan2(distance.y, distance.x) * Mathf.Rad2Deg;
+        float angle = getAngle();
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
         if (!isFacingRight(angle) && !flipped)
@@ -50,6 +48,13 @@ public class FlipWithMouse : MonoBehaviour
         transform.localScale = scale;
 
         flipped = !flipped;
+    }
+
+    float getAngle()
+    {
+        mousePos = Input.mousePosition;
+        Vector2 distance = mousePos - Camera.main.WorldToScreenPoint(transform.position);
+        return Mathf.Atan2(distance.y, distance.x) * Mathf.Rad2Deg;
     }
 
     bool isFacingRight(float angle)

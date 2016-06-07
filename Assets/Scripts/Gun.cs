@@ -26,8 +26,6 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         Vector2 distance = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
-        float angle = Mathf.Atan2(distance.y, distance.x) * Mathf.Rad2Deg;
-
-        GameObject b = Instantiate(bullet, gunTip.transform.position, Quaternion.identity) as GameObject;
+        Instantiate(bullet, gunTip.transform.position, Quaternion.identity);
     }
 }
