@@ -13,7 +13,7 @@ public class FlipWithMouse : MonoBehaviour
     float botMin = -45f;
     float botMax = -135f;
 
-    bool isUp = false;
+    bool atBackground = false;
 
     // Use this for initialization
     void Start()
@@ -29,25 +29,28 @@ public class FlipWithMouse : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
+        bool isUp = angle > topMin && angle < topMax;
+        bool isLeft = Mathf.Abs(angle) > topMax;
+        bool isRight = Mathf.Abs(angle) < topMin;
+
         // El arma se invierte si nos pasamos de cierto angulo
-        if (!isFacingRight(angle) && !flipped)
+        if (isLeft && !flipped)
         {
             flip();
         }
-        else if (isFacingRight(angle) && flipped)
+        else if (isRight && flipped)
         {
             flip();
         }
 
-        bool switchUp = angle > topMin && angle < topMax;
-        if (!isUp && switchUp)
+        if (!atBackground && isUp)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 1);
-            isUp = true;
-        } else if (isUp && !switchUp)
+            atBackground = true;
+        } else if (atBackground && !isUp)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-            isUp = false;
+            transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+            atBackground = false;
         }
 
     }
