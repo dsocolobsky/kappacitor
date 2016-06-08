@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 
+// Este es el script que hace girar el arma dependiendo
+// donde se encuentra el mouse
 public class FlipWithMouse : MonoBehaviour
 {
 
-    bool flipped;
-    Vector3 mousePos;
+    bool flipped; // Si ya hay que invertir el arma en el eje X
+    Vector3 mousePos; // Posicion del mouse
 
     // Use this for initialization
     void Start()
@@ -19,6 +21,7 @@ public class FlipWithMouse : MonoBehaviour
         float angle = getAngle();
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
+        // El arma se invierte si nos pasamos de cierto angulo
         if (!isFacingRight(angle) && !flipped)
         {
             flip();
@@ -29,6 +32,7 @@ public class FlipWithMouse : MonoBehaviour
         }
     }
 
+    // Esta funcion invierte el arma
     void flip()
     {
         Vector3 position = transform.localPosition;
@@ -50,6 +54,8 @@ public class FlipWithMouse : MonoBehaviour
         flipped = !flipped;
     }
 
+    // Esta funcion devuelve el angulo que hay entre el arma y la posicion
+    // del mouse
     float getAngle()
     {
         mousePos = Input.mousePosition;
@@ -57,6 +63,7 @@ public class FlipWithMouse : MonoBehaviour
         return Mathf.Atan2(distance.y, distance.x) * Mathf.Rad2Deg;
     }
 
+    // Devuelve si estamos apuntando a la derecha o a la izquierda del personaje
     bool isFacingRight(float angle)
     {
         if ((angle > 90 && angle < 180) || (angle < -90 && angle > -180))

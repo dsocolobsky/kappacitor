@@ -15,7 +15,7 @@ GameObject:
   - 61: {fileID: 6132048}
   - 114: {fileID: 11460534}
   - 114: {fileID: 11454800}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   - 124: {fileID: 12463590}
   - 81: {fileID: 8118818}
   - 114: {fileID: 11495992}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - 114: {fileID: 11453432}
   - 114: {fileID: 11433092}
   - 212: {fileID: 21272298}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 455100}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}

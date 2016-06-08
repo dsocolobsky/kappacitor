@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
     float removeTimer = 0.0f;
 
     public AudioClip hitSound;
-    AudioSource audio;
+    new AudioSource audio;
 
     void Start()
     {

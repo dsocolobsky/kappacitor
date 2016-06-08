@@ -8,16 +8,11 @@ public class ChangeEnemyAnimation : ChangeAnimation
 
     public Enemy.State state = Enemy.State.MOVING;
 
-    float horizontal;
-    float vertical;
-
     // Use this for initialization
     void Start()
     {
         prefix = "capacitor_";
         previousAnimation = "down";
-        horizontal = 0;
-        vertical = 0;
         animator = GetComponent<Animator>();
     }
 
@@ -29,9 +24,6 @@ public class ChangeEnemyAnimation : ChangeAnimation
 
     new public void Change(float horizontal, float vertical)
     {
-        this.horizontal = horizontal;
-        this.vertical = vertical;
-
         if (vertical == -1)
         {
             if (horizontal == -1)

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Bobina : MonoBehaviour {
 
-    Light light;
+    new Light light;
 
 	// Use this for initialization
 	void Start () {

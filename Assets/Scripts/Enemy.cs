@@ -23,7 +23,6 @@ public class Enemy : MonoBehaviour
     // Velocidad del enemigo
     public float speed = 0.75f;
 
-    Animator animator;
     // Script que cambia la animacion segun su direccion
     ChangeEnemyAnimation changeAnimation;
     // Script que controla la IA del enemigo
@@ -38,7 +37,6 @@ public class Enemy : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        animator = GetComponent<Animator>();
         changeAnimation = GetComponent<ChangeEnemyAnimation>();
         wander = GetComponent<Wander>();
     }
@@ -109,6 +107,8 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+
 
     void attack()
     {

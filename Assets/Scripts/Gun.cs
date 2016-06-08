@@ -25,7 +25,6 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
-        Vector2 distance = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         Instantiate(bullet, gunTip.transform.position, Quaternion.identity);
     }
 }

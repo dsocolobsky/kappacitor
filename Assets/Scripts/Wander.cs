@@ -5,7 +5,6 @@ public class Wander : MonoBehaviour
 {
     Vector3 target;
     Vector3 anchor;
-    Vector3 direction;
     public float circleRadius;
 
     GameObject player;
@@ -18,7 +17,6 @@ public class Wander : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         anchor = transform.position;
-        direction = new Vector3();
         detectedPlayer = false;
         target = newTarget();
     }
@@ -36,7 +34,6 @@ public class Wander : MonoBehaviour
         if (transform.position == target)
         {
             target = newTarget();
-            direction = newDirection();
         }
     }
 
