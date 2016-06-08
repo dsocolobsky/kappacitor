@@ -4,9 +4,16 @@
 // donde se encuentra el mouse
 public class FlipWithMouse : MonoBehaviour
 {
-
     bool flipped; // Si ya hay que invertir el arma en el eje X
     Vector3 mousePos; // Posicion del mouse
+
+    float topMin = 45f;
+    float topMax = 135f;
+
+    float botMin = -45f;
+    float botMax = -135f;
+
+    bool isUp = false;
 
     // Use this for initialization
     void Start()
@@ -19,6 +26,7 @@ public class FlipWithMouse : MonoBehaviour
     void Update()
     {
         float angle = getAngle();
+
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
         // El arma se invierte si nos pasamos de cierto angulo
@@ -30,6 +38,18 @@ public class FlipWithMouse : MonoBehaviour
         {
             flip();
         }
+
+        bool switchUp = angle > topMin && angle < topMax;
+        if (!isUp && switchUp)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 1);
+            isUp = true;
+        } else if (isUp && !switchUp)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+            isUp = false;
+        }
+
     }
 
     // Esta funcion invierte el arma
@@ -39,7 +59,7 @@ public class FlipWithMouse : MonoBehaviour
 
         if (!flipped)
         {
-            position.x = 0.0f;
+            position.x = -0.04f;
         }
         else
         {
