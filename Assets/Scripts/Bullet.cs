@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Bullet : MonoBehaviour
 {
     // Velocidad a la que se mueve la bala
-    public float speed = 5.0f;
-    // Posicion actual del mouse (donde va a ir la bala)
-    Vector3 mousePosition;
+    public float speed = 5f;
     // Vector de direccion para la bala
     Vector3 direction;
-    Vector3 velocity;
-    
+
     // Si vamos a destruir o no la bala (en colision)
     bool doDestroy = false;
     // Timer que mida el tiempo que tarda en destruirse la bala tras una colision
@@ -27,15 +23,12 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        // Obtener la posicion del mouse
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0;
         // Crear nuestro vector direccion dada la posicion del mouse y del arma
-        direction = (mousePosition - transform.position).normalized;
-        audio = GetComponent<AudioSource>();
+        Vector3 screenpoint = Camera.main.WorldToScreenPoint(transform.position);
+        direction = (Input.mousePosition - screenpoint).normalized;
+        direction.z = 0;
 
-        velocity = new Vector3(speed, speed, 0f);
-        transform.LookAt(mousePosition);
+        audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -56,9 +49,7 @@ public class Bullet : MonoBehaviour
         }
         else {
             // Sino, mover la bala
-            //transform.position += direction.normalized * speed * Time.deltaTime;
-            transform.position += new Vector3(transform.forward.x * velocity.x, transform.forward.y * velocity.y, 0).normalized * Time.deltaTime;
-            //transform.position += direction * speed * Time.deltaTime;
+            transform.position += direction * speed * Time.deltaTime;
         }
 
         removeTimer += Time.deltaTime;
@@ -66,8 +57,6 @@ public class Bullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        Debug.Log(speed);
     }
 
     // Si la bala colisiona con algo, comenzar a destruirla
