@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     Vector3 mousePosition;
     // Vector de direccion para la bala
     Vector3 direction;
+    Vector3 velocity;
     
     // Si vamos a destruir o no la bala (en colision)
     bool doDestroy = false;
@@ -31,8 +32,10 @@ public class Bullet : MonoBehaviour
         mousePosition.z = 0;
         // Crear nuestro vector direccion dada la posicion del mouse y del arma
         direction = (mousePosition - transform.position).normalized;
-
         audio = GetComponent<AudioSource>();
+
+        velocity = new Vector3(speed, speed, 0f);
+        transform.LookAt(mousePosition);
     }
 
     void Update()
@@ -53,7 +56,9 @@ public class Bullet : MonoBehaviour
         }
         else {
             // Sino, mover la bala
-            transform.position += direction * speed * Time.deltaTime;
+            //transform.position += direction.normalized * speed * Time.deltaTime;
+            transform.position += new Vector3(transform.forward.x * velocity.x, transform.forward.y * velocity.y, 0).normalized * Time.deltaTime;
+            //transform.position += direction * speed * Time.deltaTime;
         }
 
         removeTimer += Time.deltaTime;
@@ -61,6 +66,8 @@ public class Bullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        Debug.Log(speed);
     }
 
     // Si la bala colisiona con algo, comenzar a destruirla
