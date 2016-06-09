@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "enemy")
+        if (col.gameObject.tag == "enemybullet")
         {
             hitpoints--;
             lifebar.Change(hitpoints);

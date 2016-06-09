@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     float deathTime = 1.0f;
     float deathTimer = 0.0f;
 
-    float attackCooldown = 2.0f;
+    float attackCooldown = 3.0f;
     float attackCooldownTimer = 0.0f;
 
     bool onCooldown = false;
@@ -48,9 +48,6 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Reiniciar velocidad
-        speed = 0.75f;
-
         if (!isRed)
         {
             timeRed++;
@@ -77,8 +74,14 @@ public class Enemy : MonoBehaviour
         }
         // Obtener una nueva direccion para hacer roaming
         Vector3 direction = wander.newDirection();
-        // Cambiar la animacion dependiendo de la direccion
-        changeAnimation.Change(direction.x, direction.y);
+
+        if (state == State.MOVING)
+        {
+            // Reiniciar velocidad
+            speed = 0.75f;
+
+            changeAnimation.Change(direction.x, direction.y);
+        }
 
         // TODO: Implementar logica de ataque
         if (state != State.ATTACKING && wander.detectedPlayer && !onCooldown)
@@ -92,6 +95,9 @@ public class Enemy : MonoBehaviour
 
         if (state == State.ATTACKING)
         {
+            changeAnimation.changeState(state);
+            changeAnimation.Change(direction.x, direction.y);
+
             attackingTimer += Time.deltaTime;
 
             if (attackingTimer >= attackingTime)
@@ -141,14 +147,12 @@ public class Enemy : MonoBehaviour
     {
         speed = 0.0f;
         state = State.ATTACKING;
-        changeAnimation.changeState(State.ATTACKING);
     }
 
     void deattack()
     {
         speed = 0.75f;
         state = State.MOVING;
-        changeAnimation.changeState(State.MOVING);
         onCooldown = true;
     }
 }
