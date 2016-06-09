@@ -48,6 +48,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Obtener una nueva direccion para hacer roaming
+        Vector3 direction = wander.newDirection();
+
         if (!isRed)
         {
             timeRed++;
@@ -71,9 +74,11 @@ public class Enemy : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
+
+            changeAnimation.changeState(state);
+            changeAnimation.Change(direction.x, direction.y);
         }
-        // Obtener una nueva direccion para hacer roaming
-        Vector3 direction = wander.newDirection();
+        
 
         if (state == State.MOVING)
         {
