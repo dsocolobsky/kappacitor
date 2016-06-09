@@ -9,6 +9,7 @@ TagManager:
   - bullet
   - gun
   - enemybullet
+  - spawner
   layers:
   - Default
   - TransparentFX
