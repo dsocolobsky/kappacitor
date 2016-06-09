@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Wander : MonoBehaviour
 {
-    Vector3 target;
+    public Vector3 target { get; private set; }
     Vector3 anchor;
     public float circleRadius;
 

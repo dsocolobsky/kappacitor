@@ -28,11 +28,15 @@ public class Enemy : MonoBehaviour
     // Script que controla la IA del enemigo
     Wander wander;
 
-    // El enemigo esta atacando?
-    bool attacking = false;
-
     float deathTime = 1.0f;
     float deathTimer = 0.0f;
+
+    float attackCooldown = 2.0f;
+    float attackCooldownTimer = 0.0f;
+
+    bool onCooldown = false;
+    float attackingTime = 2.0f;
+    float attackingTimer = 0.0f;
 
     // Use this for initialization
     void Start()
@@ -77,11 +81,36 @@ public class Enemy : MonoBehaviour
         changeAnimation.Change(direction.x, direction.y);
 
         // TODO: Implementar logica de ataque
-        if (wander.detectedPlayer)
+        if (state != State.ATTACKING && wander.detectedPlayer && !onCooldown)
         {
-            //attack();
+            float distance = Vector3.Distance(wander.target, transform.position);
+            if (distance < 4)
+            {
+                attack();
+            }
         }
 
+        if (state == State.ATTACKING)
+        {
+            attackingTimer += Time.deltaTime;
+
+            if (attackingTimer >= attackingTime)
+            {
+                deattack();
+            }
+        }
+
+        if (onCooldown)
+        {
+            attackCooldownTimer += Time.deltaTime;
+            if (attackCooldownTimer >= attackCooldown)
+            {
+                attackCooldownTimer = 0.0f;
+                onCooldown = false;
+            }
+        }
+
+        //Debug.Log(attackCooldownTimer);
         wander.speed = speed;
     }
 
@@ -108,10 +137,18 @@ public class Enemy : MonoBehaviour
         }
     }
 
-
-
     void attack()
     {
-        //attacking = false;
+        speed = 0.0f;
+        state = State.ATTACKING;
+        changeAnimation.changeState(State.ATTACKING);
+    }
+
+    void deattack()
+    {
+        speed = 0.75f;
+        state = State.MOVING;
+        changeAnimation.changeState(State.MOVING);
+        onCooldown = true;
     }
 }

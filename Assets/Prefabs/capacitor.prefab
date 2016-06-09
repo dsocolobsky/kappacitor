@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &110374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 474122}
+  m_Layer: 2
+  m_Name: tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &127890
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,8 +30,8 @@ GameObject:
   - 114: {fileID: 11440230}
   - 114: {fileID: 11493524}
   - 61: {fileID: 6116786}
-  - 114: {fileID: 11446366}
   - 114: {fileID: 11498816}
+  - 114: {fileID: 11449580}
   m_Layer: 2
   m_Name: capacitor
   m_TagString: enemy
@@ -31,10 +46,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.996368, y: 1.2797143, z: 0}
+  m_LocalPosition: {x: 3.04, y: -1.39, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
+  m_Children:
+  - {fileID: 474122}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &474122
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 456578}
   m_RootOrder: 0
 --- !u!50 &5085762
 Rigidbody2D:
@@ -112,18 +140,21 @@ MonoBehaviour:
   state: 0
   hitponts: 3
   speed: 0.75
---- !u!114 &11446366
+--- !u!114 &11449580
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127890}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d95e3020bc56214295b18617c5732d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 26a5fd08baed73942a9facf765a509be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefix: capacitor_
+  bullet: {fileID: 153080, guid: 8764327d8b92eb74595a10e5e86735d0, type: 2}
+  gunTip: {fileID: 110374}
+  fireRate: 4
+  isEnemy: 0
 --- !u!114 &11493524
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,10 +5,11 @@ public class Bullet : MonoBehaviour
     // Velocidad a la que se mueve la bala
     public float speed = 5f;
     // Vector de direccion para la bala
-    Vector3 direction;
+    protected Vector3 direction;
+    protected Vector3 screenPoint;
 
     // Si vamos a destruir o no la bala (en colision)
-    bool doDestroy = false;
+    protected bool doDestroy = false;
     // Timer que mida el tiempo que tarda en destruirse la bala tras una colision
     float destroyTime = 0.0f;
 
@@ -19,13 +20,13 @@ public class Bullet : MonoBehaviour
     float removeTimer = 0.0f;
 
     public AudioClip hitSound;
-    new AudioSource audio;
+    protected new AudioSource audio;
 
     void Start()
     {
         // Crear nuestro vector direccion dada la posicion del mouse y del arma
-        Vector3 screenpoint = Camera.main.WorldToScreenPoint(transform.position);
-        direction = (Input.mousePosition - screenpoint).normalized;
+        screenPoint = Camera.main.WorldToScreenPoint(transform.position);
+        direction = (Input.mousePosition - screenPoint).normalized;
         direction.z = 0;
 
         audio = GetComponent<AudioSource>();

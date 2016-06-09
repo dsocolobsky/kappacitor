@@ -72,6 +72,8 @@ MonoBehaviour:
   bullet: {fileID: 191994, guid: 01d3ca708700fec4f8636c47f055772b, type: 2}
   gunTip: {fileID: 180432}
   fireRate: 2
+  timeToFire: 0
+  isEnemy: 0
 --- !u!114 &11441272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,7 +111,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ed42badfec57ab4c86d437ccacc0015, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8a81a34fc938ef439032874e59bea31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
