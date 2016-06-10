@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -7,7 +9,6 @@ public class Player : MonoBehaviour
     public GameObject lifebarObject;
     Lifebar lifebar;
     Shooting gunScript;
-
     public float speed;
     public int hitpoints = 6;
 
@@ -40,6 +41,15 @@ public class Player : MonoBehaviour
         {
             hitpoints--;
             lifebar.Change(hitpoints);
+
+			if (hitpoints <= 0) {
+				// MORIR
+				/*Scenes scenes = GameObject.FindGameObjectWithTag("scenes").GetComponent<Scenes>();
+				Text score = GameObject.FindGameObjectWithTag ("score").GetComponent<Text> ();
+
+				scenes.Load ("dead", "score", score.text);*/
+				SceneManager.LoadScene ("Scenes/dead");
+			}
         }
     }
 }

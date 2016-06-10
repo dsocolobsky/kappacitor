@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 // Script del enemigo (capacitor por ahora) que se ocupa
 // de varias tareas
@@ -23,6 +24,8 @@ public class Enemy : MonoBehaviour
     // Velocidad del enemigo
     public float speed = 0.75f;
 
+	Text score;
+
     // Script que cambia la animacion segun su direccion
     ChangeEnemyAnimation changeAnimation;
     // Script que controla la IA del enemigo
@@ -43,6 +46,7 @@ public class Enemy : MonoBehaviour
     {
         changeAnimation = GetComponent<ChangeEnemyAnimation>();
         wander = GetComponent<Wander>();
+		score = GameObject.FindGameObjectWithTag ("score").GetComponent<Text> ();
     }
 
     // Update is called once per frame
@@ -147,6 +151,13 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+	void OnDestroy()
+	{
+		int intscore = int.Parse (score.text);
+		intscore += 100;
+		score.text = intscore.ToString();
+	}
 
     void attack()
     {

@@ -10,6 +10,8 @@ TagManager:
   - gun
   - enemybullet
   - spawner
+  - score
+  - scenes
   layers:
   - Default
   - TransparentFX

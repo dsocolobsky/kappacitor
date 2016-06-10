@@ -13,7 +13,6 @@ GameObject:
   - 50: {fileID: 5012688}
   - 114: {fileID: 11430034}
   - 61: {fileID: 6132048}
-  - 114: {fileID: 11460534}
   - 114: {fileID: 11454800}
   m_Layer: 10
   m_Name: player
@@ -94,7 +93,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.563, y: 3.75, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400750}
@@ -234,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifebarObject: {fileID: 0}
-  speed: 3
+  speed: 2
   hitpoints: 6
 --- !u!114 &11433092
 MonoBehaviour:
@@ -260,7 +259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 191994, guid: 01d3ca708700fec4f8636c47f055772b, type: 2}
   gunTip: {fileID: 165608}
-  fireRate: 2
+  fireRate: 2.5
+  isEnemy: 0
 --- !u!114 &11454800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,18 +270,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6e03032bfee39b44a970d265450a026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefix: player_
---- !u!114 &11460534
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114298}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d95e3020bc56214295b18617c5732d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefix: player_
