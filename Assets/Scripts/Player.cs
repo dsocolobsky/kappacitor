@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         {
             GetComponent<TurnRed>().Execute();
 
-            hitpoints--;
+            //hitpoints--;
             lifebar.Change(hitpoints);
 
 			if (hitpoints <= 0) {

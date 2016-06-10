@@ -42,6 +42,8 @@ public class Enemy : MonoBehaviour
         changeAnimation = GetComponent<ChangeEnemyAnimation>();
         wander = GetComponent<Wander>();
 		score = GameObject.FindGameObjectWithTag ("score").GetComponent<Text> ();
+        attackCooldown = Mathf.FloorToInt(Random.Range(2, 6));
+        attackingTime = Random.Range(2, 6);
     }
 
     // Update is called once per frame
@@ -54,15 +56,14 @@ public class Enemy : MonoBehaviour
         if (state == State.DYING)
         {
             speed = 0.0f;
+            changeAnimation.changeState(state);
+            changeAnimation.Change(direction.x, direction.y);
 
             deathTimer += Time.deltaTime;
             if (deathTimer > deathTime)
             {
                 Destroy(this.gameObject);
             }
-
-            changeAnimation.changeState(state);
-            changeAnimation.Change(direction.x, direction.y);
         }
         
 
@@ -71,16 +72,16 @@ public class Enemy : MonoBehaviour
             // Reiniciar velocidad
             speed = 0.75f;
 
+            changeAnimation.changeState(state);
             changeAnimation.Change(direction.x, direction.y);
-        }
 
-        // TODO: Implementar logica de ataque
-        if (state != State.ATTACKING && wander.detectedPlayer && !onCooldown)
-        {
-            float distance = Vector3.Distance(wander.target, transform.position);
-            if (distance < 4)
+            if (wander.detectedPlayer && !onCooldown)
             {
-                attack();
+                float distance = Vector3.Distance(wander.target, transform.position);
+                if (distance < 4)
+                {
+                    attack();
+                }
             }
         }
 
@@ -94,6 +95,11 @@ public class Enemy : MonoBehaviour
             if (attackingTimer >= attackingTime)
             {
                 deattack();
+                changeAnimation.changeState(state);
+                changeAnimation.Change(direction.x, direction.y);
+                attackingTimer = 0.0f;
+                attackCooldown = Mathf.FloorToInt(Random.Range(2, 6));
+                attackingTime = Random.Range(2, 6);
             }
         }
 
@@ -107,14 +113,13 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        //Debug.Log(attackCooldownTimer);
         wander.speed = speed;
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         // Si una bala colisiona con el enemigo
-        if (col.gameObject.name.StartsWith("bullet"))
+        if (col.gameObject.name.StartsWith("bullet") && state != State.DYING)
         {
             GetComponent<TurnRed>().Execute();
 
