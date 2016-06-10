@@ -43,12 +43,10 @@ public class Player : MonoBehaviour
             lifebar.Change(hitpoints);
 
 			if (hitpoints <= 0) {
-				// MORIR
-				/*Scenes scenes = GameObject.FindGameObjectWithTag("scenes").GetComponent<Scenes>();
 				Text score = GameObject.FindGameObjectWithTag ("score").GetComponent<Text> ();
+                PlayerPrefs.SetString("score", score.text);
 
-				scenes.Load ("dead", "score", score.text);*/
-				SceneManager.LoadScene ("Scenes/dead");
+                SceneManager.LoadScene ("Scenes/dead");
 			}
         }
     }

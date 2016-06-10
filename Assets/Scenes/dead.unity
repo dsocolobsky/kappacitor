@@ -397,6 +397,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1363870768}
+  - 114: {fileID: 1363870769}
   m_Layer: 0
   m_Name: scoremanager
   m_TagString: Untagged
@@ -416,6 +417,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1363870769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1363870767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f58e5f6ef81224aba6f8a7821bbb0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1403004090
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +494,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Presione una tecla
+  m_Text: Dispare para continuar
 --- !u!222 &1403004093
 CanvasRenderer:
   m_ObjectHideFlags: 0
