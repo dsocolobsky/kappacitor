@@ -404,7 +404,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
+  m_Sprite: {fileID: 21300016, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1108,7 +1108,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
+  m_Sprite: {fileID: 21300016, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1470,7 +1470,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
+  m_Sprite: {fileID: 21300016, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1533,13 +1533,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1ea753de1f837428c7ea8e2bb063e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  empty: {fileID: 21300012, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
-  green_full: {fileID: 21300000, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
-  green_half: {fileID: 21300002, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
-  yellow_full: {fileID: 21300004, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
-  yellow_half: {fileID: 21300006, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
-  red_full: {fileID: 21300008, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
-  red_half: {fileID: 21300010, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
+  empty: {fileID: 21300028, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
+  green_full: {fileID: 21300016, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
+  green_half: {fileID: 21300022, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
+  yellow_full: {fileID: 21300018, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
+  yellow_half: {fileID: 21300024, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
+  red_full: {fileID: 21300020, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
+  red_half: {fileID: 21300026, guid: b26b849d9f25ee54c918d4e9ad8ac85e, type: 3}
 --- !u!114 &1440736368
 MonoBehaviour:
   m_ObjectHideFlags: 0
