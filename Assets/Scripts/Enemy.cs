@@ -14,11 +14,6 @@ public class Enemy : MonoBehaviour
 
     public State state = State.MOVING;
 
-    // El enemigo esta en rojo? (atacado)
-    bool isRed = false;
-    // Timer para controlar cuanto tiempo esta en rojo
-    float timeRed = 0.0f;
-
     // Vida del enemigo
     public int hitponts = 3;
     // Velocidad del enemigo
@@ -54,19 +49,6 @@ public class Enemy : MonoBehaviour
     {
         // Obtener una nueva direccion para hacer roaming
         Vector3 direction = wander.newDirection();
-
-        if (!isRed)
-        {
-            timeRed++;
-        }
-
-        // Mantener al enemigo en rojo solo durante 10 frames
-        if (timeRed > 10)
-        {
-            GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f);
-            isRed = false;
-            timeRed = 0.0f;
-        }
 
         // TODO: Implementar logica de ataque
         if (state == State.DYING)
@@ -134,11 +116,7 @@ public class Enemy : MonoBehaviour
         // Si una bala colisiona con el enemigo
         if (col.gameObject.name.StartsWith("bullet"))
         {
-            // Si no esta en rojo, ponerlo en rojo
-            if (!isRed)
-            {
-                GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f);
-            }
+            GetComponent<TurnRed>().Execute();
 
             // Decremetar la vida por uno
             hitponts--;

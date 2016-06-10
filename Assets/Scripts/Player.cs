@@ -39,6 +39,8 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.tag == "enemybullet")
         {
+            GetComponent<TurnRed>().Execute();
+
             hitpoints--;
             lifebar.Change(hitpoints);
 
