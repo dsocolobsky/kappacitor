@@ -32,6 +32,7 @@ GameObject:
   - 61: {fileID: 6116786}
   - 114: {fileID: 11498816}
   - 114: {fileID: 11449580}
+  - 114: {fileID: 11472322}
   m_Layer: 2
   m_Name: capacitor
   m_TagString: enemy
@@ -155,6 +156,18 @@ MonoBehaviour:
   gunTip: {fileID: 110374}
   fireRate: 4
   isEnemy: 0
+--- !u!114 &11472322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2900e412fb3624942a423a1c02855b18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0.2
 --- !u!114 &11493524
 MonoBehaviour:
   m_ObjectHideFlags: 1

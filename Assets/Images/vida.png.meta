@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b26b849d9f25ee54c918d4e9ad8ac85e
-timeCreated: 1465536975
+timeCreated: 1465574608
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -72,7 +72,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 11
-        height: 21
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -80,10 +80,10 @@ TextureImporter:
     - name: vida_1
       rect:
         serializedVersion: 2
-        x: 13
+        x: 12
         y: 0
         width: 11
-        height: 21
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -91,10 +91,10 @@ TextureImporter:
     - name: vida_2
       rect:
         serializedVersion: 2
-        x: 26
+        x: 24
         y: 0
         width: 11
-        height: 21
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,10 +102,10 @@ TextureImporter:
     - name: vida_3
       rect:
         serializedVersion: 2
-        x: 39
+        x: 36
         y: 0
         width: 11
-        height: 21
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,10 +113,10 @@ TextureImporter:
     - name: vida_4
       rect:
         serializedVersion: 2
-        x: 52
+        x: 48
         y: 0
         width: 11
-        height: 21
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,10 +124,10 @@ TextureImporter:
     - name: vida_5
       rect:
         serializedVersion: 2
-        x: 65
+        x: 60
         y: 0
         width: 11
-        height: 21
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
     - name: vida_6
       rect:
         serializedVersion: 2
-        x: 78
+        x: 72
         y: 0
         width: 11
-        height: 21
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,10 +146,10 @@ TextureImporter:
     - name: vida_7
       rect:
         serializedVersion: 2
-        x: 91
+        x: 84
         y: 0
         width: 11
-        height: 21
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
