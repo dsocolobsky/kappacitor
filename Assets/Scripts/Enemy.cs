@@ -36,74 +36,55 @@ public class Enemy : MonoBehaviour
     float attackingTime = 2.0f;
     float attackingTimer = 0.0f;
 
+    Vector3 direction;
+
     // Use this for initialization
     void Start()
     {
         changeAnimation = GetComponent<ChangeEnemyAnimation>();
         wander = GetComponent<Wander>();
 		score = GameObject.FindGameObjectWithTag ("score").GetComponent<Text> ();
-        attackCooldown = Mathf.FloorToInt(Random.Range(2, 6));
-        attackingTime = Random.Range(2, 6);
+        direction = new Vector3();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Obtener una nueva direccion para hacer roaming
-        Vector3 direction = wander.newDirection();
-
-        // TODO: Implementar logica de ataque
-        if (state == State.DYING)
-        {
-            speed = 0.0f;
-            changeAnimation.changeState(state);
-            changeAnimation.Change(direction.x, direction.y);
-
-            deathTimer += Time.deltaTime;
-            if (deathTimer > deathTime)
-            {
-                Destroy(this.gameObject);
-            }
-        }
-        
+        direction = wander.newDirection();
 
         if (state == State.MOVING)
         {
-            // Reiniciar velocidad
-            speed = 0.75f;
-
-            changeAnimation.changeState(state);
-            changeAnimation.Change(direction.x, direction.y);
-
             if (wander.detectedPlayer && !onCooldown)
             {
                 float distance = Vector3.Distance(wander.target, transform.position);
                 if (distance < 4)
                 {
-                    attack();
+                    changeState(State.ATTACKING);
                 }
             }
         }
 
         if (state == State.ATTACKING)
         {
-            changeAnimation.changeState(state);
-            changeAnimation.Change(direction.x, direction.y);
-
             attackingTimer += Time.deltaTime;
 
             if (attackingTimer >= attackingTime)
             {
-                deattack();
-                changeAnimation.changeState(state);
-                changeAnimation.Change(direction.x, direction.y);
-                attackingTimer = 0.0f;
-                attackCooldown = Mathf.FloorToInt(Random.Range(2, 6));
-                attackingTime = Random.Range(2, 6);
+                changeState(State.MOVING);
             }
         }
 
-        if (onCooldown)
+        if (state == State.DYING)
+        {
+            deathTimer += Time.deltaTime;
+            if (deathTimer > deathTime)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (state != State.DYING && onCooldown)
         {
             attackCooldownTimer += Time.deltaTime;
             if (attackCooldownTimer >= attackCooldown)
@@ -129,8 +110,7 @@ public class Enemy : MonoBehaviour
             // Comprobar si el capacitor murio
             if (hitponts <= 0)
             {
-                state = State.DYING;
-                changeAnimation.changeState(this.state);
+                changeState(State.DYING);
             }
         }
     }
@@ -144,6 +124,31 @@ public class Enemy : MonoBehaviour
             score.text = intscore.ToString();
         }
 	}
+
+    void changeState(State state)
+    {
+        this.state = state;
+
+        switch (state)
+        {
+            case State.MOVING:
+                speed = 0.75f;
+                onCooldown = true;
+                break;
+            case State.ATTACKING:
+                speed = 0.00f;
+                attackCooldown = 3.0f;
+                attackingTime = 2.0f;
+                attackingTimer = 0.0f;
+                break;
+            case State.DYING:
+                speed = 0.00f;
+                break;
+        }
+
+        changeAnimation.changeState(state);
+        changeAnimation.Change(direction.x, direction.y);
+    }
 
     void attack()
     {
