@@ -10,8 +10,6 @@ public class EnemyBullet : Bullet {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         direction = (player.transform.position - screenPoint).normalized;
 
-        Debug.Log(direction);
-
         audio = GetComponent<AudioSource>();
     }
 

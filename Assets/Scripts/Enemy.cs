@@ -154,9 +154,12 @@ public class Enemy : MonoBehaviour
 
 	void OnDestroy()
 	{
-		int intscore = int.Parse (score.text);
-		intscore += 100;
-		score.text = intscore.ToString();
+        if (score)
+        {
+            int intscore = int.Parse(score.text);
+            intscore += 100;
+            score.text = intscore.ToString();
+        }
 	}
 
     void attack()
