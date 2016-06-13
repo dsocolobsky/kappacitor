@@ -3,51 +3,75 @@ using System.Collections;
 
 public class DashAbility : MonoBehaviour
 {
+    public enum DashState
+    {
+        Ready,
+        Dashing,
+        Cooldown
+    }
 
     public DashState dashState;
-    public float dashTimer;
-    public float maxDash = 20f;
 
-    public Vector2 savedVelocity;
+    public float maxDash = 3.0f;
+    float dashTimer = 0.0f;
+
+    public float cooldown = 6.0f;
+    float cooldownTimer = 0.0f;
+    
+
+    Player player;
+    float savedVelocity;
+
+    void Start()
+    {
+        player = transform.gameObject.GetComponent<Player>();
+    }
 
     void Update()
     {
         switch (dashState)
         {
             case DashState.Ready:
-                var isDashKeyDown = Input.GetKeyDown(KeyCode.LeftShift);
+                bool isDashKeyDown = Input.GetKeyDown(KeyCode.LeftShift);
                 if (isDashKeyDown)
                 {
-                    savedVelocity = GetComponent<Rigidbody2D>().velocity;
-                    GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x * 3f, GetComponent<Rigidbody2D>().velocity.y);
-                    dashState = DashState.Dashing;
+                    savedVelocity = player.speed;
+                    switchState(DashState.Dashing);
                 }
                 break;
             case DashState.Dashing:
-                dashTimer += Time.deltaTime * 3;
+                dashTimer += Time.deltaTime;
                 if (dashTimer >= maxDash)
                 {
-                    dashTimer = maxDash;
-                    GetComponent<Rigidbody2D>().velocity = savedVelocity;
-                    dashState = DashState.Cooldown;
+                    switchState(DashState.Cooldown);
                 }
                 break;
             case DashState.Cooldown:
-                dashTimer -= Time.deltaTime;
-                if (dashTimer <= 0)
+                cooldownTimer += Time.deltaTime;
+                if (cooldownTimer >= cooldown)
                 {
-                    dashTimer = 0;
-                    dashState = DashState.Ready;
+                    switchState(DashState.Ready);
                 }
                 break;
         }
     }
-}
 
-public enum DashState
-{
-    Ready,
-    Dashing,
-    Cooldown
-}
+    void switchState(DashState state)
+    {
+        switch (state)
+        {
+            case DashState.Ready:
+                cooldownTimer = 0.0f;
+                break;
+            case DashState.Dashing:
+                player.speed *= 3f;
+                break;
+            case DashState.Cooldown:
+                player.speed = savedVelocity;
+                dashTimer = 0.0f;
+                break;
+        }
 
+        dashState = state;
+    }
+}
