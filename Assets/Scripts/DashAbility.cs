@@ -24,7 +24,7 @@ public class DashAbility : MonoBehaviour
 
     void Start()
     {
-        player = transform.gameObject.GetComponent<Player>();
+        player = GetComponent<Player>();
     }
 
     void Update()
@@ -73,5 +73,10 @@ public class DashAbility : MonoBehaviour
         }
 
         dashState = state;
+    }
+
+    public bool dashing()
+    {
+        return dashState == DashState.Dashing;
     }
 }

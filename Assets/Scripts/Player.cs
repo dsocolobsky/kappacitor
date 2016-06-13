@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public GameObject lifebarObject;
     Lifebar lifebar;
     Shooting gunScript;
+    DashAbility dash;
     public float speed;
     public int hitpoints = 6;
 
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
         changeAnimation = GetComponent<ChangePlayerAnimation>();
         lifebar = lifebarObject.GetComponent<Lifebar>();
         gunScript = transform.Find("gun").gameObject.GetComponent<Shooting>();
+        dash = GetComponent<DashAbility>();
     }
 
     // Update is called once per frame
@@ -29,7 +31,7 @@ public class Player : MonoBehaviour
         Vector3 move = new Vector3(horizontal, vertical, 0);
         transform.position += move * speed * Time.deltaTime;
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && !dash.dashing())
         {
             gunScript.Shoot();
         }
@@ -37,7 +39,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "enemybullet")
+        if (col.gameObject.tag == "enemybullet" && !dash.dashing())
         {
             GetComponent<TurnRed>().Execute();
 
