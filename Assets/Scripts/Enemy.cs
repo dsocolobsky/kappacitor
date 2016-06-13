@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     // Velocidad del enemigo
     public float speed = 0.75f;
 
-	Text score;
+    Text score;
 
     // Script que cambia la animacion segun su direccion
     ChangeEnemyAnimation changeAnimation;
@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
     {
         changeAnimation = GetComponent<ChangeEnemyAnimation>();
         wander = GetComponent<Wander>();
-		score = GameObject.FindGameObjectWithTag ("score").GetComponent<Text> ();
+        score = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
         direction = new Vector3();
     }
 
@@ -115,15 +115,15 @@ public class Enemy : MonoBehaviour
         }
     }
 
-	void OnDestroy()
-	{
+    void OnDestroy()
+    {
         if (score)
         {
             int intscore = int.Parse(score.text);
             intscore += 100;
             score.text = intscore.ToString();
         }
-	}
+    }
 
     void changeState(State state)
     {
@@ -150,16 +150,4 @@ public class Enemy : MonoBehaviour
         changeAnimation.Change(direction.x, direction.y);
     }
 
-    void attack()
-    {
-        speed = 0.0f;
-        state = State.ATTACKING;
-    }
-
-    void deattack()
-    {
-        speed = 0.75f;
-        state = State.MOVING;
-        onCooldown = true;
-    }
 }
