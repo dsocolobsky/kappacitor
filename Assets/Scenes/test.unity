@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashState: 0
   maxDash: 0.3
-  cooldown: 2
+  cooldown: 0.6
 --- !u!1001 &154967770
 Prefab:
   m_ObjectHideFlags: 0
