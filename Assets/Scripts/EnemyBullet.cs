@@ -15,7 +15,7 @@ public class EnemyBullet : Bullet {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag != "enemy")
+        if (col.gameObject.tag != "enemy" || col.gameObject.tag != "drop")
         {
             doDestroy = true;
             GetComponent<SpriteRenderer>().sprite = exploded;

@@ -54,4 +54,22 @@ public class Player : MonoBehaviour
 			}
         }
     }
+
+    public bool addHitpoints(int toAdd)
+    {
+        switch (hitpoints)
+        {
+            case 6:
+                return false;
+            case 5:
+                hitpoints += 1;
+                break;
+            default:
+                hitpoints += toAdd;
+                break;
+        }
+
+        lifebar.Change(hitpoints);
+        return true;
+    }
 }

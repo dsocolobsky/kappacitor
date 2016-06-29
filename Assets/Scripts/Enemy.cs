@@ -38,6 +38,8 @@ public class Enemy : MonoBehaviour
 
     Vector3 direction;
 
+    public GameObject despawn;
+
     // Use this for initialization
     void Start()
     {
@@ -123,6 +125,9 @@ public class Enemy : MonoBehaviour
             intscore += 100;
             score.text = intscore.ToString();
         }
+
+        Instantiate(despawn, transform.position, Quaternion.identity);
+        transform.gameObject.GetComponent<DropItem>().Drop();
     }
 
     void changeState(State state)
