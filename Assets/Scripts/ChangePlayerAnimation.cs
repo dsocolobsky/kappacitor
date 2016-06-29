@@ -35,6 +35,7 @@ public class ChangePlayerAnimation : ChangeAnimation
 	float leftMax = 157f;
 
 	bool moving = false;
+    public bool dashing = false;
 
 	// Use this for initialization
 	void Start ()
@@ -80,9 +81,11 @@ public class ChangePlayerAnimation : ChangeAnimation
 
 	protected new void play (string anim)
 	{
-		if (moving)
+        if (dashing)
+            animator.Play(prefix + "dash_" + anim);
+        else if (moving)
 			animator.Play (prefix + anim);
-		else
+        else
 			animator.Play (prefix + "idle_" + anim);
 
 		previousAnimation = anim;
@@ -95,4 +98,5 @@ public class ChangePlayerAnimation : ChangeAnimation
 		Vector2 distance = mousePos - Camera.main.WorldToScreenPoint (transform.position);
 		return Mathf.Atan2 (distance.y, distance.x) * Mathf.Rad2Deg;
 	}
+
 }

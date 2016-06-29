@@ -72,4 +72,10 @@ public class Player : MonoBehaviour
         lifebar.Change(hitpoints);
         return true;
     }
+
+    public void setDashing(bool dashing)
+    {
+        gunScript.GetComponentInParent<SpriteRenderer>().enabled = !dashing;
+        changeAnimation.dashing = dashing;
+    }
 }

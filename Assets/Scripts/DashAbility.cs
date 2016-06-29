@@ -39,13 +39,6 @@ public class DashAbility : MonoBehaviour
                     switchState(DashState.Dashing);
                 }
                 break;
-            case DashState.Dashing:
-                dashTimer += Time.deltaTime;
-                if (dashTimer >= maxDash)
-                {
-                    switchState(DashState.Cooldown);
-                }
-                break;
             case DashState.Cooldown:
                 cooldownTimer += Time.deltaTime;
                 if (cooldownTimer >= cooldown)
@@ -65,9 +58,11 @@ public class DashAbility : MonoBehaviour
                 break;
             case DashState.Dashing:
                 player.speed *= 3f;
+                player.setDashing(true);
                 break;
             case DashState.Cooldown:
                 player.speed = savedVelocity;
+                player.setDashing(false);
                 dashTimer = 0.0f;
                 break;
         }
