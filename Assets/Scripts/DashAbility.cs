@@ -6,18 +6,19 @@ public class DashAbility : MonoBehaviour
     public enum DashState
     {
         Ready,
+        Minimizing,
         Dashing,
+        Maximizing,
         Cooldown
     }
 
     public DashState dashState;
 
     public float maxDash = 3.0f;
-    float dashTimer = 0.0f;
 
     public float cooldown = 6.0f;
     float cooldownTimer = 0.0f;
-    
+
 
     Player player;
     float savedVelocity;
@@ -36,7 +37,7 @@ public class DashAbility : MonoBehaviour
                 if (isDashKeyDown)
                 {
                     savedVelocity = player.speed;
-                    switchState(DashState.Dashing);
+                    switchState(DashState.Minimizing);
                 }
                 break;
             case DashState.Cooldown:
@@ -56,14 +57,21 @@ public class DashAbility : MonoBehaviour
             case DashState.Ready:
                 cooldownTimer = 0.0f;
                 break;
-            case DashState.Dashing:
-                player.speed *= 3f;
+            case DashState.Minimizing:
+                player.speed = 0.0f;
+                player.playSound(player.minimize);
                 player.setDashing(true);
+                break;
+            case DashState.Dashing:
+                player.speed = savedVelocity * 3f;
+                break;
+            case DashState.Maximizing:
+                player.speed = 0.0f;
+                player.playSound(player.maximize);
                 break;
             case DashState.Cooldown:
                 player.speed = savedVelocity;
                 player.setDashing(false);
-                dashTimer = 0.0f;
                 break;
         }
 
@@ -72,6 +80,7 @@ public class DashAbility : MonoBehaviour
 
     public bool dashing()
     {
-        return dashState == DashState.Dashing;
+        return dashState == DashState.Dashing || dashState == DashState.Minimizing ||
+            dashState == DashState.Maximizing;
     }
 }

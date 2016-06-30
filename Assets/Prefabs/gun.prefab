@@ -72,7 +72,6 @@ MonoBehaviour:
   bullet: {fileID: 191994, guid: 01d3ca708700fec4f8636c47f055772b, type: 2}
   gunTip: {fileID: 180432}
   fireRate: 2
-  timeToFire: 0
   isEnemy: 0
 --- !u!114 &11441272
 MonoBehaviour:
