@@ -10,9 +10,12 @@ public class Shooting : MonoBehaviour
 
     public bool isEnemy;
 
+    AudioSource audio;
+
     // Use this for initialization
     void Start()
     {
+        audio = transform.gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,6 +31,11 @@ public class Shooting : MonoBehaviour
 
         timeToFire = Time.time + 1 / fireRate;
         Instantiate(bullet, gunTip.transform.position, Quaternion.identity);
+
+        if (audio)
+        {
+            audio.Play();
+        }
     }
 
     public void ShootAtPlayer()
@@ -37,5 +45,10 @@ public class Shooting : MonoBehaviour
 
         timeToFire = Time.time + 1 / fireRate;
         Instantiate(bullet, gunTip.transform.position, Quaternion.identity);
+
+        if (audio)
+        {
+            audio.Play();
+        }
     }
 }

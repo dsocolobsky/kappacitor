@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     public float speed;
     public int hitpoints = 6;
 
+    public AudioClip minimize;
+    public AudioClip maximize;
+
     // Use this for initialization
     void Start()
     {
@@ -77,5 +80,11 @@ public class Player : MonoBehaviour
     {
         gunScript.GetComponentInParent<SpriteRenderer>().enabled = !dashing;
         changeAnimation.dashing = dashing;
+    }
+
+    public void playSound(AudioClip clip)
+    {
+        transform.gameObject.GetComponent<AudioSource>().clip = clip;
+        transform.gameObject.GetComponent<AudioSource>().Play();
     }
 }
