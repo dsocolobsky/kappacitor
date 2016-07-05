@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     public AudioClip minimize;
     public AudioClip maximize;
 
+    CameraScript camera;
+
     // Use this for initialization
     void Start()
     {
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour
         lifebar = lifebarObject.GetComponent<Lifebar>();
         gunScript = transform.Find("gun").gameObject.GetComponent<Shooting>();
         dash = GetComponent<DashAbility>();
+        camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,7 @@ public class Player : MonoBehaviour
         if (Input.GetButton("Fire1") && !dash.dashing())
         {
             gunScript.Shoot();
+            camera.StartShaking();
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Lifebar : MonoBehaviour
@@ -18,12 +19,16 @@ public class Lifebar : MonoBehaviour
     public Sprite red_full;
     public Sprite red_half;
 
+    Animator animator;
+
     // Use this for initialization
     void Start()
     {
         first = transform.Find("first").gameObject;
         second = transform.Find("second").gameObject;
         third = transform.Find("third").gameObject;
+
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -73,5 +78,12 @@ public class Lifebar : MonoBehaviour
                 third.GetComponent<Image>().sprite = empty;
                 break;
         }
+
+        animator.SetBool("shaking", true);
+    }
+
+    public void StopShaking()
+    {
+        animator.SetBool("shaking", false);
     }
 }
