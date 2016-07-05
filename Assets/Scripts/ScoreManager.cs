@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            SceneManager.LoadScene("Scenes/test");
+            SceneManager.LoadScene("Scenes/level1");
         }
     }
 }

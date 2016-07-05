@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 422884}
   - 212: {fileID: 21293340}
   - 61: {fileID: 6115204}
+  - 114: {fileID: 11497582}
   m_Layer: 0
   m_Name: drop_escudo
   m_TagString: Untagged
@@ -24,8 +25,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9, y: 3.6277254, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 10.822344, y: 3.277301, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,6 +44,18 @@ BoxCollider2D:
   m_Offset: {x: 0.0001, y: 0.0003}
   serializedVersion: 2
   m_Size: {x: 0.07, y: 0.12}
+--- !u!114 &11497582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2680f92be162f7c44acedfff0bff0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!212 &21293340
 SpriteRenderer:
   m_ObjectHideFlags: 1

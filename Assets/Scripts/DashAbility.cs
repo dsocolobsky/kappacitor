@@ -50,7 +50,7 @@ public class DashAbility : MonoBehaviour
         }
     }
 
-    void switchState(DashState state)
+    public void switchState(DashState state)
     {
         switch (state)
         {

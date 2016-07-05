@@ -182,11 +182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69757ec2eab75554c88afdcd8ccdc255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 2
   exploded: {fileID: 21300006, guid: 1c664c69daed88b46a7d609dc9637295, type: 3}
   removeTime: 8
   hitSound: {fileID: 8300000, guid: 1d5aac3fddb60704782c21fb7c20bff4, type: 3}
-  isEnemy: 0
 --- !u!212 &21273788
 SpriteRenderer:
   m_ObjectHideFlags: 1
