@@ -67,19 +67,31 @@ public class Wander : MonoBehaviour
 
     public Vector3 newDirection()
     {
+        Vector3 retdir = new Vector3();
         Vector3 direction = target - transform.position;
 
-        if (direction.x < 0)
-            direction.x = -1;
-        else if (direction.x > 0)
-            direction.x = 1;
+        if (direction.x > -0.75f && direction.x < 0.75f)
+        {
+            retdir.x = 0;
+        }
+        else if (direction.x < -0.75f)
+        {
+            retdir.x = -1;
+        }
+        else {
+            retdir.x = 1;
+        }
 
         if (direction.y < 0)
-            direction.y = -1;
+        {
+            retdir.y = -1;
+        }
         else if (direction.y > 0)
-            direction.y = 1;
+        {
+            retdir.y = 1;
+        }
 
-        return direction;
+        return retdir;
     }
 
 }

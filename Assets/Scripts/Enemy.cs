@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
 
     Vector3 direction;
 
-    public GameObject despawn;
+    //public GameObject despawn;
 
     // Use this for initialization
     void Start()
@@ -97,6 +97,7 @@ public class Enemy : MonoBehaviour
         }
 
         wander.speed = speed;
+        changeAnimation.Change(direction.x, direction.y);
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -126,7 +127,7 @@ public class Enemy : MonoBehaviour
             score.text = intscore.ToString();
         }
 
-        Instantiate(despawn, transform.position, Quaternion.identity);
+        //Instantiate(despawn, transform.position, Quaternion.identity);
         transform.gameObject.GetComponent<DropItem>().Drop();
     }
 
