@@ -36,6 +36,8 @@ public class Shooting : MonoBehaviour
         {
             audio.Play();
         }
+
+        gameObject.GetComponent<Animator>().SetBool("shooting", true);
     }
 
     public void ShootAtPlayer()
@@ -50,5 +52,10 @@ public class Shooting : MonoBehaviour
         {
             audio.Play();
         }
+    }
+
+    public void setShootingFalse()
+    {
+        gameObject.GetComponent<Animator>().SetBool("shooting", false);
     }
 }
