@@ -5,7 +5,7 @@
 // segun donde apunte el mouse
 public class ChangePlayerAnimation : ChangeAnimation
 {
-	Vector3 mousePos;
+    Vector3 mousePos;
     
 	// Estos son los angulos utilizados para determinar en que
 	// momento se debe cambiar de animacion, dependiendo de la
@@ -37,6 +37,9 @@ public class ChangePlayerAnimation : ChangeAnimation
 	bool moving = false;
     public bool dashing = false;
 
+    float horizontal;
+    float vertical;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -50,33 +53,6 @@ public class ChangePlayerAnimation : ChangeAnimation
 	// Update is called once per frame
 	void Update ()
 	{
-		float horizontal = Input.GetAxisRaw ("Horizontal");
-		float vertical = Input.GetAxisRaw ("Vertical");
-
-		float angle = getAngle ();
-
-		bool isUp = angle > topMin && angle < topMax;
-		bool isDown = angle < botMin && angle > botMax;
-		bool isLeft = angle > 157 || angle < -112f;
-		bool isRight = angle > rightMin && angle < rightMax;
-		bool isTopLeft = angle > topLeftMin && angle < topLeftMax;
-		bool isTopRight = angle > topRightMin && angle < topRightMax;
-
-		moving = (horizontal != 0f || vertical != 0f);
-
-		if (isUp) {
-			play ("up");
-		} else if (isDown) {
-			play ("down");
-		} else if (isLeft) {
-			play ("left");
-		} else if (isRight) {
-			play ("right");
-		} else if (isTopLeft) {
-			play ("upleft");
-		} else if (isTopRight) {
-			play ("upright");
-		}
 	}
 
 	protected new void play (string anim)
@@ -98,5 +74,50 @@ public class ChangePlayerAnimation : ChangeAnimation
 		Vector2 distance = mousePos - Camera.main.WorldToScreenPoint (transform.position);
 		return Mathf.Atan2 (distance.y, distance.x) * Mathf.Rad2Deg;
 	}
+
+    public void calculateAngle()
+    {
+        float angle = getAngle();
+
+        bool isUp = angle > topMin && angle < topMax;
+        bool isDown = angle < botMin && angle > botMax;
+        bool isLeft = angle > 157 || angle < -112f;
+        bool isRight = angle > rightMin && angle < rightMax;
+        bool isTopLeft = angle > topLeftMin && angle < topLeftMax;
+        bool isTopRight = angle > topRightMin && angle < topRightMax;
+
+        moving = (horizontal != 0f || vertical != 0f);
+
+        if (isUp)
+        {
+            play("up");
+        }
+        else if (isDown)
+        {
+            play("down");
+        }
+        else if (isLeft)
+        {
+            play("left");
+        }
+        else if (isRight)
+        {
+            play("right");
+        }
+        else if (isTopLeft)
+        {
+            play("upleft");
+        }
+        else if (isTopRight)
+        {
+            play("upright");
+        }
+    }
+
+    public void SetDirection(float horizontal, float vertical)
+    {
+        this.horizontal = horizontal;
+        this.vertical = vertical;
+    }
 
 }

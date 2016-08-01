@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
 
     CameraScript camera;
 
+    float horizontal = 0.0f;
+    float vertical = 0.0f;
+
     // Use this for initialization
     void Start()
     {
@@ -31,8 +34,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        if (!dash.dashing())
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
+            changeAnimation.SetDirection(horizontal, vertical);
+            changeAnimation.calculateAngle();
+        }
 
         Vector3 move = new Vector3(horizontal, vertical, 0);
         transform.position += move * speed * Time.deltaTime;
@@ -60,6 +68,11 @@ public class Player : MonoBehaviour
                 SceneManager.LoadScene ("Scenes/dead");
 			}
         }
+
+        if (col.gameObject.tag == "wall" && dash.dashing())
+        {
+            SwitchState(DashAbility.DashState.Cooldown);
+        }
     }
 
     public bool addHitpoints(int toAdd)
@@ -84,11 +97,24 @@ public class Player : MonoBehaviour
     {
         gunScript.GetComponentInParent<SpriteRenderer>().enabled = !dashing;
         changeAnimation.dashing = dashing;
+
+        if (dashing)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
+            changeAnimation.SetDirection(horizontal, vertical);
+            changeAnimation.calculateAngle();
+        }
     }
 
     public void playSound(AudioClip clip)
     {
         transform.gameObject.GetComponent<AudioSource>().clip = clip;
         transform.gameObject.GetComponent<AudioSource>().Play();
+    }
+
+    public void SwitchState(DashAbility.DashState state)
+    {
+        dash.switchState(state);
     }
 }

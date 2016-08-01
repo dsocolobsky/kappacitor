@@ -21,7 +21,7 @@ public class DashAbility : MonoBehaviour
 
 
     Player player;
-    float savedVelocity;
+    float savedVelocity = 1.0f;
 
     void Start()
     {
@@ -36,7 +36,6 @@ public class DashAbility : MonoBehaviour
                 bool isDashKeyDown = Input.GetKeyDown(KeyCode.LeftShift);
                 if (isDashKeyDown)
                 {
-                    savedVelocity = player.speed;
                     switchState(DashState.Minimizing);
                 }
                 break;
