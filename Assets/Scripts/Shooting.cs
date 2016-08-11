@@ -37,7 +37,7 @@ public class Shooting : MonoBehaviour
             audio.Play();
         }
 
-        gameObject.GetComponent<Animator>().SetBool("shooting", true);
+        //gameObject.GetComponent<Animator>().SetBool("shooting", true);
     }
 
     public void ShootAtPlayer()

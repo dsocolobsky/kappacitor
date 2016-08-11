@@ -1517,7 +1517,14 @@ Prefab:
       propertyPath: hitpoints
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11454800, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
+      propertyPath: dashing
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11487818, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
+    - {fileID: 11469220, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
+    - {fileID: 11454800, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1511693552

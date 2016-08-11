@@ -84,21 +84,21 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.45
-    functionName: SwitchState
+    functionName: switchDashState
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
   - time: 1
-    functionName: SwitchState
+    functionName: switchDashState
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 3
     messageOptions: 0
   - time: 1.3333334
-    functionName: SwitchState
+    functionName: switchDashState
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
