@@ -143,6 +143,8 @@ public class Player : MonoBehaviour
 
     public void switchState(State state)
     {
+        this.state = state;
+
         switch (state)
         {
             case State.Dashing:
@@ -156,8 +158,7 @@ public class Player : MonoBehaviour
                 gunScript.GetComponentInParent<SpriteRenderer>().enabled = true;
                 break;
         }
-
-        this.state = state;
+        
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -238,7 +239,7 @@ public class Player : MonoBehaviour
         bool isTopLeft = angle > topLeftMin && angle < topLeftMax;
         bool isTopRight = angle > topRightMin && angle < topRightMax;
 
-        if ((horizontal != 0f || vertical != 0f) && !reallyDashing())
+        if ((horizontal != 0f || vertical != 0f) && state == State.Idle)
         {
             state = State.Moving;
         }
