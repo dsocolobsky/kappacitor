@@ -6,11 +6,11 @@ public class Shooting : MonoBehaviour
     public GameObject gunTip;
     public float fireRate = 0.0f;
 
-    float timeToFire = 0.0f;
+    protected float timeToFire = 0.0f;
 
     public bool isEnemy;
 
-    AudioSource audio;
+    protected AudioSource audio;
 
     // Use this for initialization
     void Start()
@@ -36,8 +36,6 @@ public class Shooting : MonoBehaviour
         {
             audio.Play();
         }
-
-        //gameObject.GetComponent<Animator>().SetBool("shooting", true);
     }
 
     public void ShootAtPlayer()

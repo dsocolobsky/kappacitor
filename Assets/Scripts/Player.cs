@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public GameObject lifebarObject;
     Lifebar lifebar;
-    Shooting gunScript;
+    PlayerWeapon gunScript;
 
     public float speed;
     float savedSpeed;
@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         lifebar = lifebarObject.GetComponent<Lifebar>();
-        gunScript = transform.Find("gun").gameObject.GetComponent<Shooting>();
+        gunScript = transform.Find("gun").gameObject.GetComponent<PlayerWeapon>();
         camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
         animator = GetComponent<Animator>();
         previousAnimation = "player_idle";
@@ -90,8 +90,9 @@ public class Player : MonoBehaviour
 
         if (Input.GetButton("Fire1") && !reallyDashing())
         {
-            gunScript.Shoot();
-            camera.StartShaking();
+            bool shot = gunScript.Shoot();
+            if (shot)
+                camera.StartShaking();
         }
 
         switch (dashState)
