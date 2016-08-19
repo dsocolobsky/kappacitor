@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     // Vida del enemigo
     public int hitponts = 3;
     // Velocidad del enemigo
-    public float speed = 0.75f;
+    public float speed = 0.35f;
 
     Text score;
 
@@ -138,7 +138,7 @@ public class Enemy : MonoBehaviour
         switch (state)
         {
             case State.MOVING:
-                speed = 0.75f;
+                speed = 0.35f;
                 onCooldown = true;
                 break;
             case State.ATTACKING:

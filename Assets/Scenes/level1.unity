@@ -282,6 +282,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -327,6 +335,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -374,6 +390,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -419,6 +443,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -594,6 +626,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -640,6 +680,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -685,6 +733,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -737,6 +793,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -783,6 +847,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -828,6 +900,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -942,6 +1022,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -987,6 +1075,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -1034,6 +1130,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -1080,6 +1184,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -1125,6 +1237,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -1239,6 +1359,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -1284,6 +1412,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -1451,6 +1587,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -1496,6 +1640,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -1585,6 +1737,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -1631,6 +1791,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -1676,6 +1844,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -1813,6 +1989,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -1929,6 +2113,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -2136,6 +2328,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -2365,6 +2565,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -2410,6 +2618,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -2564,6 +2780,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -2609,6 +2833,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
@@ -2656,6 +2888,14 @@ Prefab:
       propertyPath: m_Name
       value: capacitor (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
   m_IsPrefabParent: 0
@@ -2701,6 +2941,14 @@ Prefab:
     - target: {fileID: 127890, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
       propertyPath: m_Name
       value: capacitor (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413632, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: chance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440230, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
+      propertyPath: speed
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f43dfe19f01b504f86ab529f5865a96, type: 2}
