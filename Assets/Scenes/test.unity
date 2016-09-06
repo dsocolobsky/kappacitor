@@ -1556,6 +1556,22 @@ MonoBehaviour:
   isEnemy: 0
   cargadorObject: {fileID: 319813643}
   reloadTime: 4
+--- !u!1 &2083973040 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 107160, guid: df0e2b08e56163d459bea14a9507b6bd, type: 2}
+  m_PrefabInternal: {fileID: 1558654167}
+--- !u!114 &2083973049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2083973040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2900e412fb3624942a423a1c02855b18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0.2
 --- !u!1001 &2099489389
 Prefab:
   m_ObjectHideFlags: 0

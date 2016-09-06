@@ -19,6 +19,8 @@ public class Led : MonoBehaviour
 
     ChangeLedAnimation changeAnimation;
 
+    public int hitpoints = 2;
+
     // Use this for initialization
     void Start()
     {
@@ -56,6 +58,16 @@ public class Led : MonoBehaviour
 
         Vector3 direction = getDirection();
         changeAnimation.Change(state, direction.x, direction.y);
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.name.StartsWith("bullet") && state != State.EXPLODING)
+        {
+            GetComponent<TurnRed>().Execute();
+            hitpoints--;
+            if (hitpoints <= 0) ChangeState(State.EXPLODING);
+        }
     }
 
     public Vector3 getDirection()
