@@ -24,6 +24,10 @@ public class Led : MonoBehaviour
     public float circleRadius;
     Vector3 target;
     bool goStraight = false;
+    bool separating = false;
+    float separateTimer = 0.0f;
+
+    BoxCollider2D[] colliders;
 
     // Use this for initialization
     void Start()
@@ -53,7 +57,7 @@ public class Led : MonoBehaviour
     {
         if (state != State.MOVING)
         {
-            this.speed = 0.0f;
+            speed = 0.0f;
         }
 
         if (detectedPlayer && target != Vector3.zero)
@@ -61,7 +65,7 @@ public class Led : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         }
 
-        if (transform.position == target)
+        if (transform.position == target && !separating)
         {
             target = player.transform.position;
             goStraight = true;
@@ -85,6 +89,23 @@ public class Led : MonoBehaviour
             GetComponent<TurnRed>().Execute();
             hitpoints--;
             if (hitpoints <= 0) ChangeState(State.EXPLODING);
+        }
+
+        if (col.gameObject.name.StartsWith("player") && state == State.EXPLODING)
+        {
+            player.GetComponent<Player>().Damage(1);
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if ((col.gameObject.name.StartsWith("led") || col.gameObject.name.StartsWith("wall")) && state != State.EXPLODING)
+        {
+            separateTimer += Time.deltaTime;
+            if (separateTimer > 1.0f)
+            {
+                target = newSeparateTarget();
+            }
         }
     }
 
@@ -137,9 +158,26 @@ public class Led : MonoBehaviour
         return target;
     }
 
+    Vector3 newSeparateTarget()
+    {
+        Vector3 target = new Vector3();
+        target = Random.insideUnitCircle * circleRadius/2 + new Vector2(transform.position.x, transform.position.y);
+
+        return target;
+    }
+
     public void ChangeState(State state)
     {
         this.state = state;
+
+        if (state == State.EXPLODING)
+        {
+            colliders = GetComponents<BoxCollider2D>();
+            foreach (BoxCollider2D c in colliders)
+            {
+                c.size = new Vector2(c.size.x * 4, c.size.y * 3);
+            }
+        }
     }
 
     public void Destroy()

@@ -166,17 +166,7 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.tag == "enemybullet" && !reallyDashing())
         {
-            GetComponent<TurnRed>().Execute();
-
-            hitpoints--;
-            lifebar.Change(hitpoints);
-
-			if (hitpoints <= 0) {
-				Text score = GameObject.FindGameObjectWithTag ("score").GetComponent<Text> ();
-                PlayerPrefs.SetString("score", score.text);
-
-                SceneManager.LoadScene ("Scenes/dead");
-			}
+            Damage(1);
         }
 
         if (col.gameObject.tag == "wall" && reallyDashing())
@@ -275,5 +265,21 @@ public class Player : MonoBehaviour
     {
         return dashState == DashState.Dashing || dashState == DashState.Minimizing ||
             dashState == DashState.Maximizing;
+    }
+
+    public void Damage(int hit)
+    {
+        GetComponent<TurnRed>().Execute();
+
+        hitpoints -= hit;
+        lifebar.Change(hitpoints);
+
+        if (hitpoints <= 0)
+        {
+            Text score = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
+            PlayerPrefs.SetString("score", score.text);
+
+            SceneManager.LoadScene("Scenes/dead");
+        }
     }
 }
