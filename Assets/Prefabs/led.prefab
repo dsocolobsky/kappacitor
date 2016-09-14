@@ -10,11 +10,11 @@ GameObject:
   - 4: {fileID: 460178}
   - 212: {fileID: 21203988}
   - 95: {fileID: 9501718}
-  - 114: {fileID: 11443538}
   - 114: {fileID: 11495502}
   - 50: {fileID: 5070860}
   - 61: {fileID: 6139598}
   - 61: {fileID: 6171594}
+  - 114: {fileID: 11496696}
   m_Layer: 2
   m_Name: led
   m_TagString: Untagged
@@ -96,19 +96,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11443538
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 694ce10aba283c84e872d02aaa08fdef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  speed: 0.8
 --- !u!114 &11495502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +108,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefix: 
+--- !u!114 &11496696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694ce10aba283c84e872d02aaa08fdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  speed: 0.8
+  hitpoints: 2
+  circleRadius: 0
+  explosion: {fileID: 117950, guid: ad5622f17e6603844a8cea441a0ad8e6, type: 2}
 --- !u!212 &21203988
 SpriteRenderer:
   m_ObjectHideFlags: 1
