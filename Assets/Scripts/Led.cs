@@ -7,13 +7,13 @@ public class Led : MonoBehaviour
     {
         MOVING,
         ATTACKING,
-        EXPLODING
     }
 
     public State state = State.MOVING;
 
     GameObject player;
     bool detectedPlayer;
+    bool touchingPlayer = false;
 
     public float speed;
 
@@ -28,6 +28,8 @@ public class Led : MonoBehaviour
     float separateTimer = 0.0f;
 
     BoxCollider2D[] colliders;
+
+    public GameObject explosion;
 
     // Use this for initialization
     void Start()
@@ -84,22 +86,17 @@ public class Led : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name.StartsWith("bullet") && state != State.EXPLODING)
+        if (col.gameObject.name.StartsWith("bullet"))
         {
             GetComponent<TurnRed>().Execute();
             hitpoints--;
-            if (hitpoints <= 0) ChangeState(State.EXPLODING);
-        }
-
-        if (col.gameObject.name.StartsWith("player") && state == State.EXPLODING)
-        {
-            player.GetComponent<Player>().Damage(1);
+            if (hitpoints <= 0) Explode();
         }
     }
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if ((col.gameObject.name.StartsWith("led") || col.gameObject.name.StartsWith("wall")) && state != State.EXPLODING)
+        if ((col.gameObject.name.StartsWith("led") || col.gameObject.name.StartsWith("wall")))
         {
             separateTimer += Time.deltaTime;
             if (separateTimer > 1.0f)
@@ -112,7 +109,7 @@ public class Led : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = new Color(1, 0, 0, 0.25f);
-        Gizmos.DrawSphere(player.transform.position, circleRadius);
+        //Gizmos.DrawSphere(player.transform.position, circleRadius);
         Gizmos.color = new Color(0, 1, 0, 0.25f);
         Gizmos.DrawSphere(target, circleRadius * 0.05f);
         Gizmos.color = detectedPlayer ? Color.red : Color.cyan;
@@ -169,19 +166,11 @@ public class Led : MonoBehaviour
     public void ChangeState(State state)
     {
         this.state = state;
-
-        if (state == State.EXPLODING)
-        {
-            colliders = GetComponents<BoxCollider2D>();
-            foreach (BoxCollider2D c in colliders)
-            {
-                c.size = new Vector2(c.size.x * 4, c.size.y * 3);
-            }
-        }
     }
 
-    public void Destroy()
+    public void Explode()
     {
+        Instantiate(explosion, this.transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }

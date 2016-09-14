@@ -76,8 +76,6 @@ public class ChangeLedAnimation : ChangeAnimation
             animator.Play("led_" + anim);
         else if (state == Led.State.ATTACKING)
             animator.Play("led_attacking");
-        else if (state == Led.State.EXPLODING)
-            animator.Play("led_exploding");
 
         previousAnimation = anim;
     }
