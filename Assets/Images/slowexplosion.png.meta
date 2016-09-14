@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: 6163cda4c5e2f164b9a74392130238a8
+timeCreated: 1473875073
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: slowexplosion_0
+    21300002: slowexplosion_1
+    21300004: slowexplosion_2
+    21300006: slowexplosion_3
+    21300008: slowexplosion_4
+    21300010: slowexplosion_5
+    21300012: slowexplosion_6
+    21300014: slowexplosion_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: slowexplosion_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 21}
+        - {x: -19, y: 14}
+        - {x: -19, y: -15}
+        - {x: -14, y: -21}
+        - {x: 14, y: -21}
+        - {x: 19, y: -19}
+        - {x: 19, y: 18}
+        - {x: 18, y: 21}
+    - name: slowexplosion_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 21}
+        - {x: -19, y: 14}
+        - {x: -19, y: -15}
+        - {x: -14, y: -21}
+        - {x: 14, y: -21}
+        - {x: 19, y: -19}
+        - {x: 19, y: 18}
+        - {x: 18, y: 21}
+    - name: slowexplosion_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 19}
+        - {x: -17, y: 15}
+        - {x: -17, y: -14}
+        - {x: -8, y: -19}
+        - {x: 4, y: -19}
+        - {x: 10, y: -18}
+        - {x: 17, y: -11}
+        - {x: 17, y: 19}
+      - - {x: -10, y: -2}
+        - {x: -7, y: 9}
+        - {x: 12, y: -2}
+        - {x: 4, y: -10}
+    - name: slowexplosion_3
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 0
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 21}
+        - {x: -19, y: 14}
+        - {x: -19, y: -15}
+        - {x: -14, y: -21}
+        - {x: 14, y: -21}
+        - {x: 19, y: -19}
+        - {x: 19, y: 18}
+        - {x: 18, y: 21}
+    - name: slowexplosion_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 25}
+        - {x: -23, y: 14}
+        - {x: -23, y: -16}
+        - {x: -13, y: -25}
+        - {x: 12, y: -25}
+        - {x: 23, y: -14}
+        - {x: 23, y: 17}
+        - {x: 9, y: 25}
+    - name: slowexplosion_5
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 27}
+        - {x: -25, y: 16}
+        - {x: -25, y: -27}
+        - {x: 25, y: -27}
+        - {x: 25, y: 24}
+        - {x: 18, y: 27}
+      - - {x: -12, y: -7}
+        - {x: -7, y: 17}
+        - {x: 17, y: 12}
+        - {x: 12, y: -12}
+    - name: slowexplosion_6
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 27}
+        - {x: -27, y: 22}
+        - {x: -27, y: -15}
+        - {x: -26, y: -21}
+        - {x: -14, y: -27}
+        - {x: 12, y: -27}
+        - {x: 20, y: -25}
+        - {x: 27, y: -17}
+        - {x: 27, y: 27}
+    - name: slowexplosion_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 179, y: 26}
+        - {x: 176, y: 27}
+        - {x: 154, y: 27}
+        - {x: 146, y: 23}
+        - {x: 140, y: 16}
+        - {x: 125, y: 26}
+        - {x: 120, y: 27}
+        - {x: 92, y: 27}
+        - {x: 83, y: 21}
+        - {x: 83, y: -14}
+        - {x: 89, y: -27}
+        - {x: 192, y: -27}
+        - {x: 192, y: 15}
+        - {x: 186, y: 18}
+      - - {x: 40, y: 25}
+        - {x: 30, y: 11}
+        - {x: 30, y: -13}
+        - {x: 43, y: -25}
+        - {x: 66, y: -25}
+        - {x: 71, y: -23}
+        - {x: 80, y: -14}
+        - {x: 80, y: 12}
+        - {x: 76, y: 25}
+      - - {x: -186, y: 21}
+        - {x: -186, y: -15}
+        - {x: -184, y: -21}
+        - {x: -158, y: -21}
+        - {x: -152, y: -20}
+        - {x: -144, y: -12}
+        - {x: -144, y: 11}
+        - {x: -147, y: 21}
+      - - {x: -97, y: 21}
+        - {x: -123, y: 21}
+        - {x: -131, y: 14}
+        - {x: -131, y: -10}
+        - {x: -125, y: -21}
+        - {x: -101, y: -21}
+        - {x: -90, y: -13}
+        - {x: -89, y: -9}
+        - {x: -89, y: 11}
+      - - {x: -12, y: 21}
+        - {x: -13, y: 20}
+        - {x: -21, y: 8}
+        - {x: -21, y: -12}
+        - {x: -14, y: -21}
+        - {x: 10, y: -21}
+        - {x: 21, y: -15}
+        - {x: 21, y: 12}
+        - {x: 11, y: 21}
+      - - {x: -41, y: 17}
+        - {x: -51, y: 19}
+        - {x: -64, y: 19}
+        - {x: -72, y: 14}
+        - {x: -74, y: 6}
+        - {x: -74, y: -16}
+        - {x: -65, y: -19}
+        - {x: -43, y: -19}
+        - {x: -38, y: -14}
+        - {x: -36, y: -4}
+        - {x: -36, y: 9}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

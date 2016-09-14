@@ -64,6 +64,10 @@ public class Player : MonoBehaviour
     public float dashCooldown = 6.0f;
     float dashCooldownTimer = 0.0f;
 
+    bool slowed = false;
+    float slowTime;
+    float slowTimer;
+
     // Use this for initialization
     void Start()
     {
@@ -111,6 +115,17 @@ public class Player : MonoBehaviour
                     switchDashState(DashState.Ready);
                 }
                 break;
+        }
+
+        if (slowed)
+        {
+            slowTimer += Time.deltaTime;
+            if (slowTimer >= slowTime)
+            {
+                speed = savedSpeed;
+                slowTimer = 0.0f;
+                slowed = false;
+            }
         }
     }
 
@@ -281,5 +296,12 @@ public class Player : MonoBehaviour
 
             SceneManager.LoadScene("Scenes/dead");
         }
+    }
+
+    public void Slow(float time)
+    {
+        speed = speed * 0.5f;
+        slowTime = time;
+        slowed = true;
     }
 }
