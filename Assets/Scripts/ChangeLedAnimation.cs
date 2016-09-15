@@ -3,13 +3,11 @@ using System.Collections;
 
 public class ChangeLedAnimation : ChangeAnimation
 {
-
     Led.State state = Led.State.MOVING;
 
     // Use this for initialization
     void Start()
     {
-        prefix = "led_";
         previousAnimation = "down";
         animator = GetComponent<Animator>();
     }
@@ -73,9 +71,9 @@ public class ChangeLedAnimation : ChangeAnimation
     protected new void play(string anim)
     {
         if (state == Led.State.MOVING)
-            animator.Play("led_" + anim);
+            animator.Play(prefix + anim);
         else if (state == Led.State.ATTACKING)
-            animator.Play("led_attacking");
+            animator.Play(prefix + "attacking");
 
         previousAnimation = anim;
     }
