@@ -123,7 +123,7 @@ MonoBehaviour:
   speed: 0.8
   hitpoints: 2
   circleRadius: 0
-  explosion: {fileID: 117950, guid: ad5622f17e6603844a8cea441a0ad8e6, type: 2}
+  explosion: {fileID: 177312, guid: 523bffa911ff13d4ea2ee0d08df35ad0, type: 2}
 --- !u!212 &21281452
 SpriteRenderer:
   m_ObjectHideFlags: 1
