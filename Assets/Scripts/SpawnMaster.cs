@@ -7,6 +7,8 @@ public class SpawnMaster : MonoBehaviour {
     int numberEnemies;
     GameObject[] spawners;
 
+    public GameObject[] spawningEnemies;
+
     // Use this for initialization
     void Start () {
         spawners = GameObject.FindGameObjectsWithTag("spawner");
@@ -24,7 +26,7 @@ public class SpawnMaster : MonoBehaviour {
             do
             {
                 s = spawners[Mathf.FloorToInt(Random.Range(0, spawners.Length))];
-                s.GetComponent<Spawner>().Spawn();
+                s.GetComponent<Spawner>().Spawn(spawningEnemies[Random.Range(0, spawningEnemies.Length)]);
             } while (insideCamera(s.transform.position));
         }
     }

@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-    public GameObject obj;
-
 	// Use this for initialization
 	void Start () {
 	
@@ -15,7 +13,7 @@ public class Spawner : MonoBehaviour {
 	
 	}
 
-    public void Spawn()
+    public void Spawn(GameObject obj)
     {
         Instantiate(obj, transform.position, Quaternion.identity);
     }
