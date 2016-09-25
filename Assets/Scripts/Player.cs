@@ -250,6 +250,11 @@ public class Player : MonoBehaviour
             state = State.Moving;
         }
 
+        if (horizontal == 0f && vertical == 0f)
+        {
+            state = State.Idle;
+        }
+
         if (isUp)
         {
             playAnimation("up");
