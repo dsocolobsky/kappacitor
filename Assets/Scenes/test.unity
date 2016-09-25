@@ -1680,6 +1680,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 11495992, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
+      propertyPath: cursor
+      value: 
+      objectReference: {fileID: 2800000, guid: 56021cac1eddf754590d6cef318a6a5d, type: 3}
     m_RemovedComponents:
     - {fileID: 11487818, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
     - {fileID: 11469220, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
