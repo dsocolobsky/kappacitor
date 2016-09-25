@@ -1668,6 +1668,18 @@ Prefab:
       propertyPath: dashing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 458148, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.024
+      objectReference: {fileID: 0}
+    - target: {fileID: 458148, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 458148, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11487818, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}
     - {fileID: 11469220, guid: efba7837e8fa76f439b40c0edfac79b8, type: 2}

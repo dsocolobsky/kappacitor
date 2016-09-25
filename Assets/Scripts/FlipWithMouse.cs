@@ -62,11 +62,11 @@ public class FlipWithMouse : MonoBehaviour
 
         if (!flipped)
         {
-            position.x = -0.04f;
+            position.x = -0.018f;
         }
         else
         {
-            position.x = 0.1f;
+            position.x = 0.018f;
         }
         transform.localPosition = position;
 
