@@ -8,6 +8,8 @@ public class PlayerWeapon : Shooting {
     public float reloadTime;
     float reloadTimer = 0.0f;
 
+    bool recargando = false;
+
 	// Use this for initialization
 	void Start () {
         if (cargadorObject != null)
@@ -35,14 +37,25 @@ public class PlayerWeapon : Shooting {
 
     // Update is called once per frame
     void Update () {
-        if (cargador.actualBalas < 1)
+        if (recargando)
         {
             reloadTimer += Time.deltaTime;
             if (reloadTimer > reloadTime)
             {
                 cargador.Reload();
                 reloadTimer = 0.0f;
+                recargando = false;
             }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.R) && !recargando && cargador.actualBalas < 6)
+        {
+            recargando = true;
+        }
+
+        if (cargador.actualBalas < 1)
+        {
+            recargando = true;    
         }
     }
 }
