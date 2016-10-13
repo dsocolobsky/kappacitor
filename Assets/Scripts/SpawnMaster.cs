@@ -20,14 +20,14 @@ public class SpawnMaster : MonoBehaviour {
         enemyArray = GameObject.FindGameObjectsWithTag("enemy");
         numberEnemies = enemyArray.Length;
 
-        if (numberEnemies < enemies)
+        if (numberEnemies < 1)
         {
             GameObject s;
-            do
+            for (int i = 0; i < 4; i++)
             {
-                s = spawners[Mathf.FloorToInt(Random.Range(0, spawners.Length))];
+                s = spawners[i];
                 s.GetComponent<Spawner>().Spawn(spawningEnemies[Random.Range(0, spawningEnemies.Length)]);
-            } while (insideCamera(s.transform.position));
+            }
         }
     }
 

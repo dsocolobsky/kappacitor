@@ -13,12 +13,9 @@ GameObject:
   - 50: {fileID: 5012688}
   - 114: {fileID: 11430034}
   - 61: {fileID: 6132048}
-  - 114: {fileID: 11454800}
   - 61: {fileID: 6182714}
   - 114: {fileID: 11422850}
   - 82: {fileID: 8212078}
-  - 114: {fileID: 11469220}
-  - 114: {fileID: 11487818}
   m_Layer: 10
   m_Name: player
   m_TagString: Player
@@ -39,6 +36,8 @@ GameObject:
   - 124: {fileID: 12463590}
   - 81: {fileID: 8118818}
   - 114: {fileID: 11495992}
+  - 95: {fileID: 9555602}
+  - 114: {fileID: 11430394}
   m_Layer: 10
   m_Name: camera
   m_TagString: MainCamera
@@ -54,10 +53,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458148}
-  - 114: {fileID: 11453432}
   - 114: {fileID: 11433092}
   - 212: {fileID: 21272298}
   - 82: {fileID: 8216230}
+  - 114: {fileID: 11419086}
   m_Layer: 10
   m_Name: gun
   m_TagString: Untagged
@@ -99,8 +98,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.563, y: 3.75, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0.42, y: 0.306, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400750}
   - {fileID: 458148}
@@ -125,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -0.0604, z: 1}
+  m_LocalPosition: {x: 0.018, y: -0.024, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 455100}
@@ -151,7 +150,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 1
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -161,7 +160,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
@@ -372,6 +371,23 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119766}
   m_Enabled: 1
+--- !u!95 &9555602
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119766}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a8b0cb71b68687478976040094255a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9584462
 Animator:
   serializedVersion: 3
@@ -389,6 +405,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11419086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f96139f35d3ffe4987bb318656b2a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 191994, guid: 01d3ca708700fec4f8636c47f055772b, type: 2}
+  gunTip: {fileID: 165608}
+  fireRate: 2.5
+  isEnemy: 0
+  cargadorObject: {fileID: 0}
+  reloadTime: 2
 --- !u!114 &11422850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -413,10 +446,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifebarObject: {fileID: 0}
-  speed: 2
+  speed: 1
   hitpoints: 6
   minimize: {fileID: 8300000, guid: 9ee31e1efb57e7c4aa1bbd8dae5a8d8e, type: 3}
   maximize: {fileID: 8300000, guid: 1309120feddeffb41b331d569bb658c7, type: 3}
+  state: 0
+  dashState: 0
+  dashCooldown: 6
+--- !u!114 &11430394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c517ffb7fa31874087e276c786fb1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11433092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -428,62 +475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090b188f6a12e4d44b113a32da2200c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11453432
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a5fd08baed73942a9facf765a509be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 191994, guid: 01d3ca708700fec4f8636c47f055772b, type: 2}
-  gunTip: {fileID: 165608}
-  fireRate: 2.5
-  isEnemy: 0
---- !u!114 &11454800
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6e03032bfee39b44a970d265450a026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefix: player_
-  dashing: 0
---- !u!114 &11469220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0a5ed9b8e70fa5448f8547213a442d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashState: 0
-  maxDash: 0.3
-  cooldown: 0.6
---- !u!114 &11487818
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0a5ed9b8e70fa5448f8547213a442d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashState: 0
-  maxDash: 0.3
-  cooldown: 0.6
 --- !u!114 &11495992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -495,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f2e365002dc56439f0f1d4261a2087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: 9d0d8321f7d3a0e48a2ae01d1658e9dd, type: 3}
+  cursor: {fileID: 2800000, guid: 56021cac1eddf754590d6cef318a6a5d, type: 3}
   cursorMode: 1
 --- !u!124 &12463590
 Behaviour:
