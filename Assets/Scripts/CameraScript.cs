@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CameraScript : MonoBehaviour {
 
@@ -12,7 +13,10 @@ public class CameraScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	    if (Input.GetButtonDown("Cancel"))
+        {
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
 	}
 
     public void StartShaking() {

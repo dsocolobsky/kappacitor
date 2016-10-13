@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class MainMenu : MonoBehaviour {
@@ -23,6 +24,25 @@ public class MainMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetButtonDown("Submit"))
+        {
+            switch (ind_index)
+            {
+                case 0:
+                    SceneManager.LoadScene("test", LoadSceneMode.Single);
+                    break;
+                case 1:
+                    SceneManager.LoadScene("OpcionesMenu", LoadSceneMode.Single);
+                    break;
+                case 2:
+                    SceneManager.LoadScene("Highscore", LoadSceneMode.Single);
+                    break;
+                case 3:
+                    Application.Quit();
+                    break;
+            }
+        }
+
         if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.UpArrow))
         {
             if (Input.GetKeyUp(KeyCode.DownArrow))

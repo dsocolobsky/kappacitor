@@ -1,0 +1,97 @@
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 550 Ti (ID=0x1244)
+    Vendor:   NVIDIA
+    VRAM:     977 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Dylan\Desktop\kappacitor\kappacitor_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Dylan\Desktop\kappacitor\kappacitor_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Dylan\Desktop\kappacitor\kappacitor_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Dylan\Desktop\kappacitor\kappacitor_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Dylan\Desktop\kappacitor\kappacitor_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Dylan\Desktop\kappacitor\kappacitor_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Dylan\Desktop\kappacitor\kappacitor_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Dylan\Desktop\kappacitor\kappacitor_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.180 seconds
+Platform assembly: C:\Users\Dylan\Desktop\kappacitor\kappacitor_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Dylan\Desktop\kappacitor\kappacitor_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI.Hid> Failed to create device file:
+ 2 The system cannot find the file specified.
+
+ 
+(Filename:  Line: 54)
+
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.618892 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.599494 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 219.
+Total: 0.133765 ms (FindLiveObjects: 0.028794 ms CreateObjectMapping: 0.021504 ms MarkObjects: 0.073990 ms  DeleteObjects: 0.008747 ms)
+
+Scene 'AudioMenu' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+ 
+(Filename:  Line: 520)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.304343 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.117363 ms (FindLiveObjects: 0.012756 ms CreateObjectMapping: 0.010934 ms MarkObjects: 0.084195 ms  DeleteObjects: 0.008747 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.344801 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 721.
+Total: 0.321474 ms (FindLiveObjects: 0.042280 ms CreateObjectMapping: 0.054672 ms MarkObjects: 0.210671 ms  DeleteObjects: 0.013121 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.365780 ms
+
+Unloading 367 unused Assets to reduce memory usage. Loaded Objects now: 245.
+Total: 0.550005 ms (FindLiveObjects: 0.020775 ms CreateObjectMapping: 0.032439 ms MarkObjects: 0.105335 ms  DeleteObjects: 0.391090 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.384165 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 723.
+Total: 0.338240 ms (FindLiveObjects: 0.038999 ms CreateObjectMapping: 0.053943 ms MarkObjects: 0.228895 ms  DeleteObjects: 0.015308 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.808788 ms
+
+Unloading 367 unused Assets to reduce memory usage. Loaded Objects now: 245.
+Total: 0.611238 ms (FindLiveObjects: 0.034625 ms CreateObjectMapping: 0.052485 ms MarkObjects: 0.131942 ms  DeleteObjects: 0.391455 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.331315 ms
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 225.
+Total: 0.169484 ms (FindLiveObjects: 0.017495 ms CreateObjectMapping: 0.019682 ms MarkObjects: 0.121737 ms  DeleteObjects: 0.009841 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.281016 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 245.
+Total: 0.150896 ms (FindLiveObjects: 0.011298 ms CreateObjectMapping: 0.011298 ms MarkObjects: 0.118457 ms  DeleteObjects: 0.009476 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.332773 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 723.
+Total: 0.320016 ms (FindLiveObjects: 0.036083 ms CreateObjectMapping: 0.056130 ms MarkObjects: 0.214680 ms  DeleteObjects: 0.012392 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.804414 ms
+
+Unloading 367 unused Assets to reduce memory usage. Loaded Objects now: 245.
+Total: 0.697621 ms (FindLiveObjects: 0.035354 ms CreateObjectMapping: 0.053214 ms MarkObjects: 0.112260 ms  DeleteObjects: 0.496426 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 35cc -> priority: 1 
