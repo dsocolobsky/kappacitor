@@ -3,11 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class AudioMenu : MonoBehaviour
 {
-
     int ind_index = 0;
     GameObject[] left_indicators;
     GameObject[] right_indicators;
     GameObject[] barritas;
+
+    float total_volume;
+    float sound_volume;
+    float music_volume;
 
     // Use this for initialization
     void Start()
@@ -27,6 +30,14 @@ public class AudioMenu : MonoBehaviour
         barritas[2] = GameObject.Find("barritasonido_2");
 
         ind_index = 0;
+
+        total_volume = PlayerPrefs.GetFloat("total_volume");
+        sound_volume = PlayerPrefs.GetFloat("sound_volume");
+        music_volume = PlayerPrefs.GetFloat("music_volume");
+
+        setBarritaScale(0, total_volume);
+        setBarritaScale(1, sound_volume);
+        setBarritaScale(2, music_volume);
     }
 
     // Update is called once per frame
@@ -34,26 +45,39 @@ public class AudioMenu : MonoBehaviour
     {
         if (Input.GetButtonDown("Submit") && ind_index == 3)
         {
+            PlayerPrefs.SetFloat("total_volume", total_volume);
+            PlayerPrefs.SetFloat("sound_volume", sound_volume);
+            PlayerPrefs.SetFloat("music_volume", music_volume);
             SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
 
         if (Input.GetKeyUp(KeyCode.LeftArrow) && ind_index != 3)
         {
-            Vector3 scale = barritas[ind_index].transform.localScale;
-            if (scale.x > 0.0f)
+            switch(ind_index)
             {
-                float scalex = scale.x - 0.10f;
-                barritas[ind_index].transform.localScale = new Vector3(scalex, scale.y, scale.z);
+                case 0:
+                    changeVolume(0, -1, ref total_volume);
+                    break;
+                case 1:
+                    changeVolume(1, -1, ref sound_volume);
+                    break;
+                case 2:
+                    changeVolume(2, -1, ref music_volume);
+                    break;
             }
-        }
-
-        if (Input.GetKeyUp(KeyCode.RightArrow) && ind_index != 3)
+        } else if (Input.GetKeyUp(KeyCode.RightArrow) && ind_index != 3)
         {
-            Vector3 scale = barritas[ind_index].transform.localScale;
-            if (scale.x < 1.0f)
+            switch (ind_index)
             {
-                float scalex = scale.x + 0.10f;
-                barritas[ind_index].transform.localScale = new Vector3(scalex, scale.y, scale.z);
+                case 0:
+                    changeVolume(0, 1, ref total_volume);
+                    break;
+                case 1:
+                    changeVolume(1, 1, ref sound_volume);
+                    break;
+                case 2:
+                    changeVolume(2, 1, ref music_volume);
+                    break;
             }
         }
 
@@ -87,6 +111,27 @@ public class AudioMenu : MonoBehaviour
             }
 
         }
+    }
 
+    void setBarritaScale(int index, float volume)
+    {
+        Vector3 localscale = barritas[index].transform.localScale;
+        barritas[index].transform.localScale = new Vector3(volume, localscale.y, localscale.z);
+    }
+
+    void changeVolume(int index, int direction, ref float volume)
+    {
+        Vector3 scale = barritas[index].transform.localScale;
+        if (direction == -1 && scale.x > 0.0f)
+        {
+            float scalex = scale.x - 0.10f;
+            barritas[index].transform.localScale = new Vector3(scalex, scale.y, scale.z);
+            volume = scalex;
+        } else if (direction == 1 && scale.x < 1.0f)
+        {
+            float scalex = scale.x + 0.10f;
+            barritas[index].transform.localScale = new Vector3(scalex, scale.y, scale.z);
+            volume = scalex;
+        }
     }
 }
