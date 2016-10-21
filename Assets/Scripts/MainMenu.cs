@@ -21,9 +21,8 @@ public class MainMenu : MonoBehaviour {
 
         ind_index = 0;
 
-        if (!PlayerPrefs.HasKey("total_volume"))
+        if (!PlayerPrefs.HasKey("sound_volume"))
         {
-            PlayerPrefs.SetFloat("total_volume", 1.0f);
             PlayerPrefs.SetFloat("sound_volume", 1.0f);
             PlayerPrefs.SetFloat("music_volume", 1.0f);
         }

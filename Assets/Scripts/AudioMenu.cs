@@ -15,10 +15,10 @@ public class AudioMenu : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        left_indicators = new GameObject[4];
-        right_indicators = new GameObject[4];
+        left_indicators = new GameObject[3];
+        right_indicators = new GameObject[3];
 
-        for (int i = 0; i <= 3; i++)
+        for (int i = 0; i <= 2; i++)
         {
             left_indicators[i] = GameObject.Find("ind_left_" + i.ToString());
             right_indicators[i] = GameObject.Find("ind_right_" + i.ToString());
@@ -27,57 +27,43 @@ public class AudioMenu : MonoBehaviour
         barritas = new GameObject[3];
         barritas[0] = GameObject.Find("barritasonido_0");
         barritas[1] = GameObject.Find("barritasonido_1");
-        barritas[2] = GameObject.Find("barritasonido_2");
 
         ind_index = 0;
 
-        total_volume = PlayerPrefs.GetFloat("total_volume");
         sound_volume = PlayerPrefs.GetFloat("sound_volume");
         music_volume = PlayerPrefs.GetFloat("music_volume");
 
-        setBarritaScale(0, total_volume);
-        setBarritaScale(1, sound_volume);
-        setBarritaScale(2, music_volume);
+        setBarritaScale(0, sound_volume);
+        setBarritaScale(1, music_volume);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Submit") && ind_index == 3)
+        if (Input.GetButtonDown("Submit") && ind_index == 2)
         {
-            PlayerPrefs.SetFloat("total_volume", total_volume);
             PlayerPrefs.SetFloat("sound_volume", sound_volume);
             PlayerPrefs.SetFloat("music_volume", music_volume);
             SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftArrow) && ind_index != 3)
+        if (Input.GetKeyUp(KeyCode.LeftArrow) && ind_index != 2)
         {
-            switch(ind_index)
+            if (ind_index == 0)
             {
-                case 0:
-                    changeVolume(0, -1, ref total_volume);
-                    break;
-                case 1:
-                    changeVolume(1, -1, ref sound_volume);
-                    break;
-                case 2:
-                    changeVolume(2, -1, ref music_volume);
-                    break;
+                changeVolume(0, -1, ref sound_volume);
+            } else if(ind_index == 1)
+            {
+                changeVolume(1, -1, ref music_volume);
             }
-        } else if (Input.GetKeyUp(KeyCode.RightArrow) && ind_index != 3)
+        } else if (Input.GetKeyUp(KeyCode.RightArrow) && ind_index != 2)
         {
-            switch (ind_index)
+            if (ind_index == 0)
             {
-                case 0:
-                    changeVolume(0, 1, ref total_volume);
-                    break;
-                case 1:
-                    changeVolume(1, 1, ref sound_volume);
-                    break;
-                case 2:
-                    changeVolume(2, 1, ref music_volume);
-                    break;
+                changeVolume(0, 1, ref sound_volume);
+            } else if (ind_index == 1)
+            {
+                changeVolume(1, 1, ref music_volume);
             }
         }
 
@@ -86,8 +72,8 @@ public class AudioMenu : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.DownArrow))
             {
                 ind_index++;
-                if (ind_index > 3)
-                    ind_index = 3;
+                if (ind_index > 2)
+                    ind_index = 2;
             }
             else if (Input.GetKeyUp(KeyCode.UpArrow))
             {
@@ -96,7 +82,7 @@ public class AudioMenu : MonoBehaviour
                     ind_index = 0;
             }
 
-            for (int i = 0; i <= 3; i++)
+            for (int i = 0; i <= 2; i++)
             {
                 if (i == ind_index)
                 {
