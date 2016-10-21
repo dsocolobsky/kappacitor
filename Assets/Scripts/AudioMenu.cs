@@ -8,9 +8,8 @@ public class AudioMenu : MonoBehaviour
     GameObject[] right_indicators;
     GameObject[] barritas;
 
-    float total_volume;
-    float sound_volume;
     float music_volume;
+    float sound_volume;
 
     // Use this for initialization
     void Start()
@@ -30,11 +29,11 @@ public class AudioMenu : MonoBehaviour
 
         ind_index = 0;
 
-        sound_volume = PlayerPrefs.GetFloat("sound_volume");
         music_volume = PlayerPrefs.GetFloat("music_volume");
+        sound_volume = PlayerPrefs.GetFloat("sound_volume");
 
-        setBarritaScale(0, sound_volume);
-        setBarritaScale(1, music_volume);
+        setBarritaScale(0, music_volume);
+        setBarritaScale(1, sound_volume);        
     }
 
     // Update is called once per frame
@@ -42,8 +41,12 @@ public class AudioMenu : MonoBehaviour
     {
         if (Input.GetButtonDown("Submit") && ind_index == 2)
         {
+            music_volume = sanitize(barritas[0].transform.localScale.x);
+            sound_volume = sanitize(barritas[1].transform.localScale.x);
+
             PlayerPrefs.SetFloat("sound_volume", sound_volume);
             PlayerPrefs.SetFloat("music_volume", music_volume);
+
             SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
 
@@ -120,4 +123,20 @@ public class AudioMenu : MonoBehaviour
             volume = scalex;
         }
     }
+
+    float sanitize(float n)
+    {
+        float m = (float)System.Math.Round(n, 2);
+        if (m < 0)
+        {
+            m = 0;
+        }
+        else if (m > 1)
+        {
+            m = 1;
+        }
+
+        return m;
+    }
+
 }

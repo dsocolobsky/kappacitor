@@ -9,8 +9,6 @@ public class EnemyBullet : Bullet {
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         direction = (player.transform.position - screenPoint).normalized;
-
-        audio = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -19,7 +17,7 @@ public class EnemyBullet : Bullet {
         {
             doDestroy = true;
             GetComponent<SpriteRenderer>().sprite = exploded;
-            audio.Play(0);
+            audioSource.Play(0);
         }
     }
 }

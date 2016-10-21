@@ -10,6 +10,7 @@ public class Explosion : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         AudioSource audio = GetComponent<AudioSource>();
+        audio.volume = PlayerPrefs.GetFloat("sound_volume");
         audio.Play();
 	}
 	

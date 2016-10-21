@@ -10,11 +10,19 @@ public class PlayerWeapon : Shooting {
 
     bool recargando = false;
 
+    AudioSource audioSource;
+
 	// Use this for initialization
 	void Start () {
         if (cargadorObject != null)
         {
             cargador = cargadorObject.GetComponent<Cargador>();
+        }
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource)
+        {
+            audioSource.volume = PlayerPrefs.GetFloat("sound_volume");
         }
 	}
 
@@ -26,9 +34,9 @@ public class PlayerWeapon : Shooting {
         timeToFire = Time.time + 1 / fireRate;
         Instantiate(bullet, gunTip.transform.position, Quaternion.identity);
 
-        if (audio)
+        if (audioSource)
         {
-            audio.Play();
+            audioSource.Play();
         }
 
         cargador.GastarBala();

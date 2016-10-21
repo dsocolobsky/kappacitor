@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
     float removeTimer = 0.0f;
 
     public AudioClip hitSound;
-    protected new AudioSource audio;
+    protected AudioSource audioSource;
 
     void Start()
     {
@@ -29,7 +29,8 @@ public class Bullet : MonoBehaviour
         direction = (Input.mousePosition - screenPoint).normalized;
         direction.z = 0;
 
-        audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetFloat("sound_volume");
     }
 
     void Update()
@@ -67,7 +68,7 @@ public class Bullet : MonoBehaviour
         {
             doDestroy = true;
             GetComponent<SpriteRenderer>().sprite = exploded;
-            audio.Play(0);
+            audioSource.Play(0);
         }
     }
 }

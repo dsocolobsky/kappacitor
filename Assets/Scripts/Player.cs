@@ -77,6 +77,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         previousAnimation = "player_idle";
         savedSpeed = speed;
+        GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("sound_volume");
     }
 
     // Update is called once per frame
@@ -210,8 +211,8 @@ public class Player : MonoBehaviour
 
     public void playSound(AudioClip clip)
     {
-        transform.gameObject.GetComponent<AudioSource>().clip = clip;
-        transform.gameObject.GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().clip = clip;
+        GetComponent<AudioSource>().Play();
     }
 
     void playAnimation(string anim)

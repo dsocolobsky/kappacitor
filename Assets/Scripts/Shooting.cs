@@ -10,12 +10,14 @@ public class Shooting : MonoBehaviour
 
     public bool isEnemy;
 
-    protected AudioSource audio;
+    AudioSource audioSource;
 
     // Use this for initialization
     void Start()
     {
-        audio = transform.gameObject.GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource)
+            audioSource.volume = PlayerPrefs.GetFloat("sound_volume");
     }
 
     // Update is called once per frame
@@ -32,9 +34,9 @@ public class Shooting : MonoBehaviour
         timeToFire = Time.time + 1 / fireRate;
         Instantiate(bullet, gunTip.transform.position, Quaternion.identity);
 
-        if (audio)
+        if (audioSource)
         {
-            audio.Play();
+            audioSource.Play();
         }
     }
 
@@ -46,9 +48,9 @@ public class Shooting : MonoBehaviour
         timeToFire = Time.time + 1 / fireRate;
         Instantiate(bullet, gunTip.transform.position, Quaternion.identity);
 
-        if (audio)
+        if (audioSource)
         {
-            audio.Play();
+            audioSource.Play();
         }
     }
 
