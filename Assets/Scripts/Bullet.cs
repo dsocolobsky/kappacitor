@@ -64,7 +64,7 @@ public class Bullet : MonoBehaviour
     // Si la bala colisiona con algo, comenzar a destruirla
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag != "drop")
+        if (col.gameObject.tag != "drop" && col.gameObject.tag != "explosion")
         {
             doDestroy = true;
             GetComponent<SpriteRenderer>().sprite = exploded;

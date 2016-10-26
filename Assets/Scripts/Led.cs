@@ -30,8 +30,6 @@ public class Led : MonoBehaviour
     bool separating = false;
     float separateTimer = 0.0f;
 
-    BoxCollider2D[] colliders;
-
     public GameObject explosion;
 
     // Use this for initialization
@@ -175,14 +173,6 @@ public class Led : MonoBehaviour
     public void Explode()
     {
         Instantiate(explosion, this.transform.position, Quaternion.identity);
-
-        if (score)
-        {
-            int intscore = int.Parse(score.text);
-            intscore += 100;
-            score.text = intscore.ToString();
-        }
-
         Destroy(this.gameObject);
     }
 }

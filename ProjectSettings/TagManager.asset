@@ -12,6 +12,7 @@ TagManager:
   - spawner
   - score
   - scenes
+  - explosion
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - EnemyBullets
   - LedRojo
   - LedAzul
-  - 
+  - Explosion
   - 
   - 
   - 

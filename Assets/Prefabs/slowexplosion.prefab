@@ -14,9 +14,9 @@ GameObject:
   - 50: {fileID: 5067004}
   - 61: {fileID: 6135970}
   - 114: {fileID: 11499446}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: slowexplosion
-  m_TagString: Untagged
+  m_TagString: explosion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
