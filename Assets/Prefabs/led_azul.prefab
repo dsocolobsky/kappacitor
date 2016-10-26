@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  speed: 0.8
+  speed: 1
   hitpoints: 2
   circleRadius: 0
   explosion: {fileID: 177312, guid: 523bffa911ff13d4ea2ee0d08df35ad0, type: 2}

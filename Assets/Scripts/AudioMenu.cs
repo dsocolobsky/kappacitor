@@ -7,6 +7,7 @@ public class AudioMenu : MonoBehaviour
     GameObject[] left_indicators;
     GameObject[] right_indicators;
     GameObject[] barritas;
+    MenuItem[] items;
 
     float music_volume;
     float sound_volume;
@@ -14,6 +15,11 @@ public class AudioMenu : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        items = new MenuItem[3];
+        items[0] = GameObject.Find("musica").GetComponent<MenuItem>();
+        items[1] = GameObject.Find("efectos").GetComponent<MenuItem>();
+        items[2] = GameObject.Find("atras").GetComponent<MenuItem>();
+
         left_indicators = new GameObject[3];
         right_indicators = new GameObject[3];
 
@@ -39,7 +45,7 @@ public class AudioMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Submit") && ind_index == 2)
+        if ((Input.GetButtonDown("Submit") || Input.GetMouseButtonDown(0)) && ind_index == 2)
         {
             music_volume = sanitize(barritas[0].transform.localScale.x);
             sound_volume = sanitize(barritas[1].transform.localScale.x);
@@ -99,6 +105,42 @@ public class AudioMenu : MonoBehaviour
                 }
             }
 
+        }
+
+        if (Input.GetAxis("Mouse X") < 0 || Input.GetAxis("Mouse X") > 0)
+        {
+            foreach (MenuItem item in items)
+            {
+                if (item.activated)
+                {
+                    ind_index = item.index;
+                    for (int i = 0; i <= 2; i++)
+                    {
+                        if (i == ind_index)
+                        {
+                            left_indicators[i].GetComponent<SpriteRenderer>().enabled = true;
+                            right_indicators[i].GetComponent<SpriteRenderer>().enabled = true;
+                        }
+                        else
+                        {
+                            left_indicators[i].GetComponent<SpriteRenderer>().enabled = false;
+                            right_indicators[i].GetComponent<SpriteRenderer>().enabled = false;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void clickedBarrita(int index, int direction)
+    {
+        if (index == 0)
+        {
+            changeVolume(0, direction, ref music_volume);
+        }
+        else
+        {
+            changeVolume(1, direction, ref sound_volume);
         }
     }
 

@@ -8,8 +8,16 @@ public class MainMenu : MonoBehaviour {
     GameObject[] left_indicators;
     GameObject[] right_indicators;
 
+    MenuItem[] items;
+
 	// Use this for initialization
 	void Start () {
+        items = new MenuItem[4];
+        items[0] = GameObject.Find("jugar").GetComponent<MenuItem>();
+        items[1] = GameObject.Find("opciones").GetComponent<MenuItem>();
+        items[2] = GameObject.Find("highscore").GetComponent<MenuItem>();
+        items[3] = GameObject.Find("salir").GetComponent<MenuItem>();
+
         left_indicators = new GameObject[4];
         right_indicators = new GameObject[4];
 
@@ -30,7 +38,7 @@ public class MainMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("Submit"))
+        if (Input.GetButtonDown("Submit") || Input.GetMouseButtonDown(0))
         {
             switch (ind_index)
             {
@@ -79,5 +87,29 @@ public class MainMenu : MonoBehaviour {
 
         }
 
-	}
+        if (Input.GetAxis("Mouse X") < 0 || Input.GetAxis("Mouse X") > 0)
+        {
+            foreach (MenuItem item in items)
+            {
+                if (item.activated)
+                {
+                    ind_index = item.index;
+                    for (int i = 0; i <= 3; i++)
+                    {
+                        if (i == ind_index)
+                        {
+                            left_indicators[i].GetComponent<SpriteRenderer>().enabled = true;
+                            right_indicators[i].GetComponent<SpriteRenderer>().enabled = true;
+                        }
+                        else
+                        {
+                            left_indicators[i].GetComponent<SpriteRenderer>().enabled = false;
+                            right_indicators[i].GetComponent<SpriteRenderer>().enabled = false;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }

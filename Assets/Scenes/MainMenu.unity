@@ -152,6 +152,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 106998835}
   - 212: {fileID: 106998834}
+  - 61: {fileID: 106998837}
+  - 114: {fileID: 106998836}
   m_Layer: 0
   m_Name: highscore
   m_TagString: Untagged
@@ -201,6 +203,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &106998836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 106998833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5335a1d3c15ec4da218f6d7223eed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
+  activated: 0
+--- !u!61 &106998837
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 106998833}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.02, y: 0.04}
+  serializedVersion: 2
+  m_Size: {x: 4.4, y: 0.9}
 --- !u!1 &111742939
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +355,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 478586090}
   - 212: {fileID: 478586089}
+  - 61: {fileID: 478586092}
+  - 114: {fileID: 478586091}
   m_Layer: 0
   m_Name: jugar
   m_TagString: Untagged
@@ -375,6 +406,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &478586091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 478586088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5335a1d3c15ec4da218f6d7223eed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  activated: 0
+--- !u!61 &478586092
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 478586088}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.02, y: 0.04}
+  serializedVersion: 2
+  m_Size: {x: 4.4, y: 0.9}
 --- !u!1 &587123372
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +558,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1147527036}
   - 212: {fileID: 1147527035}
+  - 61: {fileID: 1147527038}
+  - 114: {fileID: 1147527037}
   m_Layer: 0
   m_Name: salir
   m_TagString: Untagged
@@ -549,6 +609,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!114 &1147527037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147527034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5335a1d3c15ec4da218f6d7223eed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 3
+  activated: 0
+--- !u!61 &1147527038
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147527034}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.02, y: 0.04}
+  serializedVersion: 2
+  m_Size: {x: 4.4, y: 0.9}
 --- !u!1 &1163977979
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +703,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1224322291}
   - 212: {fileID: 1224322290}
+  - 61: {fileID: 1224322293}
+  - 114: {fileID: 1224322292}
   m_Layer: 0
   m_Name: opciones
   m_TagString: Untagged
@@ -665,6 +754,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1224322292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224322289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5335a1d3c15ec4da218f6d7223eed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 1
+  activated: 0
+--- !u!61 &1224322293
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224322289}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.02, y: 0.04}
+  serializedVersion: 2
+  m_Size: {x: 4.4, y: 0.9}
 --- !u!1 &1499722412
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +885,7 @@ GameObject:
   - 124: {fileID: 1708206719}
   - 81: {fileID: 1708206718}
   - 114: {fileID: 1708206723}
+  - 114: {fileID: 1708206724}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -854,6 +971,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47258d990da63ee4d8cdbbfe5f88635a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1708206724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708206717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f2e365002dc56439f0f1d4261a2087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 2800000, guid: 95493ca2287d5914ca0a7605b5fce923, type: 3}
+  cursorMode: 0
 --- !u!1 &1770340837
 GameObject:
   m_ObjectHideFlags: 0
