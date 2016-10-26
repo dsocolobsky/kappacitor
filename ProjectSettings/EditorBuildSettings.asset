@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Highscore.unity
   - enabled: 1
     path: Assets/Scenes/AudioMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/JuegoMenu.unity

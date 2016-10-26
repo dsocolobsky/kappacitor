@@ -38,6 +38,7 @@ public class OpcionesMenu : MonoBehaviour
             switch (ind_index)
             {
                 case 0:
+                    SceneManager.LoadScene("JuegoMenu", LoadSceneMode.Single);
                     break;
                 case 1:
                     SceneManager.LoadScene("AudioMenu", LoadSceneMode.Single);
