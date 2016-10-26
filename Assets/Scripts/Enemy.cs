@@ -103,7 +103,7 @@ public class Enemy : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         // Si una bala colisiona con el enemigo
-        if (col.gameObject.name.StartsWith("bullet") && state != State.DYING)
+        if ((col.gameObject.name.StartsWith("bullet") || col.gameObject.name.StartsWith("explosion")) && state != State.DYING)
         {
             GetComponent<TurnRed>().Execute();
 

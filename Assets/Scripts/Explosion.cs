@@ -26,6 +26,11 @@ public class Explosion : MonoBehaviour {
             touchingPlayer = true;
             player = col.gameObject.GetComponent<Player>();
         }
+
+        if (col.gameObject.name.StartsWith("led"))
+        {
+            col.gameObject.GetComponent<Led>().Explode();
+        }
     }
 
     public void Damage()
