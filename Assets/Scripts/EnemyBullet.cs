@@ -17,7 +17,8 @@ public class EnemyBullet : Bullet {
         {
             doDestroy = true;
             GetComponent<SpriteRenderer>().sprite = exploded;
-            audioSource.Play(0);
+            if (audioSource)
+                audioSource.Play(0);
         }
     }
 }

@@ -118,19 +118,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void OnDestroy()
-    {
-        if (score)
-        {
-            int intscore = int.Parse(score.text);
-            intscore += 100;
-            score.text = intscore.ToString();
-        }
-
-        //Instantiate(despawn, transform.position, Quaternion.identity);
-        transform.gameObject.GetComponent<DropItem>().Drop();
-    }
-
     void changeState(State state)
     {
         this.state = state;

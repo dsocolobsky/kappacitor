@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Led : MonoBehaviour
 {
+    Text score;
+
     public enum State
     {
         MOVING,
@@ -38,6 +41,7 @@ public class Led : MonoBehaviour
         detectedPlayer = false;
         changeAnimation = GetComponent<ChangeLedAnimation>();
         target = new Vector3();
+        score = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
     }
 
     void FixedUpdate()
@@ -171,6 +175,14 @@ public class Led : MonoBehaviour
     public void Explode()
     {
         Instantiate(explosion, this.transform.position, Quaternion.identity);
+
+        if (score)
+        {
+            int intscore = int.Parse(score.text);
+            intscore += 100;
+            score.text = intscore.ToString();
+        }
+
         Destroy(this.gameObject);
     }
 }
