@@ -17,8 +17,18 @@ public class BarritaScript : MonoBehaviour {
 	
 	}
 
-    void OnMouseUpAsButton()
+    void OnMouseOver()
     {
-        audioMenu.clickedBarrita(index, direction);
+        if (Input.GetAxis("Mouse ScrollWheel") != 0)
+        {
+            float x = Input.GetAxis("Mouse ScrollWheel");
+            if (x > 0)
+            {
+                audioMenu.clickedBarrita(index, 1);
+            } else
+            {
+                audioMenu.clickedBarrita(index, -1);
+            }
+        }
     }
 }

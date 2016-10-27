@@ -152,6 +152,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 363498360}
   - 212: {fileID: 363498359}
+  - 61: {fileID: 363498362}
+  - 114: {fileID: 363498361}
   m_Layer: 0
   m_Name: barrasonido_1
   m_TagString: Untagged
@@ -201,6 +203,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &363498361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 363498358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad6c51dd2482fb4b918b3c991097ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  direction: 0
+  audioMenu: {fileID: 0}
+--- !u!61 &363498362
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 363498358}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.0026112199}
+  serializedVersion: 2
+  m_Size: {x: 3.113244, y: 0.5236902}
 --- !u!1 &482498271
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +530,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1065993619}
   - 212: {fileID: 1065993618}
+  - 61: {fileID: 1065993621}
+  - 114: {fileID: 1065993620}
   m_Layer: 0
   m_Name: barrasonido_0
   m_TagString: Untagged
@@ -549,6 +581,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1065993620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065993617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad6c51dd2482fb4b918b3c991097ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  direction: 0
+  audioMenu: {fileID: 0}
+--- !u!61 &1065993621
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065993617}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.0026112199}
+  serializedVersion: 2
+  m_Size: {x: 3.113244, y: 0.5236902}
 --- !u!1 &1083307805
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +618,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1083307807}
   - 212: {fileID: 1083307806}
-  - 114: {fileID: 1083307808}
   m_Layer: 0
   m_Name: barritasonido_0
   m_TagString: Untagged
@@ -608,20 +667,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
---- !u!114 &1083307808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1083307805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bad6c51dd2482fb4b918b3c991097ef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
-  direction: 0
-  audioMenu: {fileID: 0}
 --- !u!1 &1086690268
 GameObject:
   m_ObjectHideFlags: 0
