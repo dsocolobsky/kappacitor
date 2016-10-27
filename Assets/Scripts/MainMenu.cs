@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
@@ -10,18 +11,19 @@ public class MainMenu : MonoBehaviour {
 
     MenuItem[] items;
 
+    public Text highscoretext;
+
 	// Use this for initialization
 	void Start () {
-        items = new MenuItem[4];
+        items = new MenuItem[3];
         items[0] = GameObject.Find("jugar").GetComponent<MenuItem>();
         items[1] = GameObject.Find("opciones").GetComponent<MenuItem>();
-        items[2] = GameObject.Find("highscore").GetComponent<MenuItem>();
-        items[3] = GameObject.Find("salir").GetComponent<MenuItem>();
+        items[2] = GameObject.Find("salir").GetComponent<MenuItem>();
 
-        left_indicators = new GameObject[4];
-        right_indicators = new GameObject[4];
+        left_indicators = new GameObject[3];
+        right_indicators = new GameObject[3];
 
-        for (int i = 0; i <= 3; i++)
+        for (int i = 0; i <= 2; i++)
         {
             left_indicators[i] = GameObject.Find("ind_left_" + i.ToString());
             right_indicators[i] = GameObject.Find("ind_right_" + i.ToString());
@@ -34,6 +36,9 @@ public class MainMenu : MonoBehaviour {
             PlayerPrefs.SetFloat("sound_volume", 1.0f);
             PlayerPrefs.SetFloat("music_volume", 1.0f);
         }
+
+        int highscore = PlayerPrefs.GetInt("highscore", 0);
+        highscoretext.text = "HIGHSCORE: " + highscore.ToString();
     }
 	
 	// Update is called once per frame
@@ -49,9 +54,6 @@ public class MainMenu : MonoBehaviour {
                     SceneManager.LoadScene("OpcionesMenu", LoadSceneMode.Single);
                     break;
                 case 2:
-                    SceneManager.LoadScene("Highscore", LoadSceneMode.Single);
-                    break;
-                case 3:
                     Application.Quit();
                     break;
             }
@@ -62,8 +64,8 @@ public class MainMenu : MonoBehaviour {
             if (Input.GetKeyUp(KeyCode.DownArrow))
             {
                 ind_index++;
-                if (ind_index > 3)
-                    ind_index = 3;
+                if (ind_index > 2)
+                    ind_index = 2;
             }
             else if (Input.GetKeyUp(KeyCode.UpArrow))
             {
@@ -72,7 +74,7 @@ public class MainMenu : MonoBehaviour {
                     ind_index = 0;
             }
 
-            for (int i = 0; i <= 3; i++)
+            for (int i = 0; i <= 2; i++)
             {
                 if (i == ind_index)
                 {
@@ -94,7 +96,7 @@ public class MainMenu : MonoBehaviour {
                 if (item.activated)
                 {
                     ind_index = item.index;
-                    for (int i = 0; i <= 3; i++)
+                    for (int i = 0; i <= 2; i++)
                     {
                         if (i == ind_index)
                         {

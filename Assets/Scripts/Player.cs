@@ -299,6 +299,13 @@ public class Player : MonoBehaviour
         {
             Text score = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
             PlayerPrefs.SetString("score", score.text);
+            int scoren = int.Parse(score.text);
+
+            if (PlayerPrefs.GetInt("highscore", 0) < scoren)
+            {
+                PlayerPrefs.SetInt("highscore", scoren);
+            }
+
             PlayerPrefs.SetInt("deadby", enemy);
 
             SceneManager.LoadScene("Scenes/dead");
