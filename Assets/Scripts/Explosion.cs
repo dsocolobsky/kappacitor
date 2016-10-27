@@ -37,7 +37,7 @@ public class Explosion : MonoBehaviour {
     {
         if (touchingPlayer)
         {
-            player.Damage(damage);
+            player.Damage(damage, 2);
         }
     }
 

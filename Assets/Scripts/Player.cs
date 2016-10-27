@@ -182,7 +182,7 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.tag == "enemybullet" && !reallyDashing())
         {
-            Damage(1);
+            Damage(1, 1);
         }
 
         if (col.gameObject.tag == "wall" && reallyDashing())
@@ -288,7 +288,7 @@ public class Player : MonoBehaviour
             dashState == DashState.Maximizing;
     }
 
-    public void Damage(int hit)
+    public void Damage(int hit, int enemy)
     {
         GetComponent<TurnRed>().Execute();
 
@@ -299,6 +299,7 @@ public class Player : MonoBehaviour
         {
             Text score = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
             PlayerPrefs.SetString("score", score.text);
+            PlayerPrefs.SetInt("deadby", enemy);
 
             SceneManager.LoadScene("Scenes/dead");
         }
