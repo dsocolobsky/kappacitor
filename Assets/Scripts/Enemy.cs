@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
 
     Vector3 direction;
 
-    //public GameObject despawn;
+    public GameObject smoke;
 
     // Use this for initialization
     void Start()
@@ -83,6 +83,7 @@ public class Enemy : MonoBehaviour
             if (deathTimer > deathTime)
             {
                 Destroy(this.gameObject);
+                Instantiate(smoke, this.transform.position, Quaternion.identity);
             }
         }
 

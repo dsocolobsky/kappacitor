@@ -217,6 +217,7 @@ MonoBehaviour:
   state: 0
   hitponts: 3
   speed: 0.75
+  smoke: {fileID: 169352, guid: 7823fd352052b4645acf7aa7aa0fdfdc, type: 2}
 --- !u!114 &11449580
 MonoBehaviour:
   m_ObjectHideFlags: 1

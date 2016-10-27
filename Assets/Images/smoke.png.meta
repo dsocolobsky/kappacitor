@@ -1,15 +1,13 @@
 fileFormatVersion: 2
-guid: d4fec473b6cc4ba4c8d7b4e4163a03d7
-timeCreated: 1467154234
+guid: c6a96b64bf841d248b91a5ffef0f2857
+timeCreated: 1477597956
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: capacitor_despawn_0
-    21300002: capacitor_despawn_1
-    21300004: capacitor_despawn_2
-    21300006: capacitor_despawn_3
-    21300008: capacitor_despawn_4
-    21300010: capacitor_despawn_5
+    21300000: smoke_0
+    21300002: smoke_1
+    21300004: smoke_2
+    21300006: smoke_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -56,72 +54,85 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: capacitor_despawn_0
+    - name: smoke_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 14
-        height: 11
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: capacitor_despawn_1
+      outline:
+      - - {x: -9, y: 15}
+        - {x: -15, y: 6}
+        - {x: -15, y: -8}
+        - {x: -8, y: -15}
+        - {x: 7, y: -15}
+        - {x: 15, y: -8}
+        - {x: 15, y: 12}
+        - {x: 7, y: 15}
+    - name: smoke_1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 2
-        width: 16
-        height: 7
+        x: 33
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: capacitor_despawn_2
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -16, y: 6}
+        - {x: -16, y: -9}
+        - {x: -10, y: -16}
+        - {x: 8, y: -16}
+        - {x: 16, y: -12}
+        - {x: 16, y: 8}
+        - {x: 8, y: 16}
+    - name: smoke_2
       rect:
         serializedVersion: 2
-        x: 48
-        y: 3
-        width: 20
-        height: 5
+        x: 66
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: capacitor_despawn_3
+      outline:
+      - - {x: -14, y: 16}
+        - {x: -16, y: 10}
+        - {x: -16, y: -9}
+        - {x: -8, y: -16}
+        - {x: 13, y: -16}
+        - {x: 16, y: -10}
+        - {x: 16, y: 16}
+    - name: smoke_3
       rect:
         serializedVersion: 2
-        x: 74
-        y: 2
-        width: 24
-        height: 7
+        x: 99
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: capacitor_despawn_4
-      rect:
-        serializedVersion: 2
-        x: 109
-        y: 2
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: capacitor_despawn_5
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 3
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -12}
+        - {x: -15, y: -16}
+        - {x: 13, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 13}
+        - {x: 15, y: 16}
+      - - {x: 10, y: 9}
+        - {x: 10, y: 10}
+        - {x: 9, y: 9}
+        - {x: 7, y: -8}
     outline: []
   spritePackingTag: 
   userData: 
