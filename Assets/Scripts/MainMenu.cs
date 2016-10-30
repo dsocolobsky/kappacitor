@@ -13,6 +13,8 @@ public class MainMenu : MonoBehaviour {
 
     public Text highscoretext;
 
+    SoundManager soundmanager;
+
 	// Use this for initialization
 	void Start () {
         items = new MenuItem[3];
@@ -39,12 +41,16 @@ public class MainMenu : MonoBehaviour {
 
         int highscore = PlayerPrefs.GetInt("highscore", 0);
         highscoretext.text = "HIGHSCORE: " + highscore.ToString();
+
+        soundmanager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetButtonDown("Submit") || Input.GetMouseButtonDown(0))
         {
+            soundmanager.Selected();
+
             switch (ind_index)
             {
                 case 0:
@@ -87,6 +93,7 @@ public class MainMenu : MonoBehaviour {
                 }
             }
 
+            soundmanager.MouseOver();
         }
 
         if (Input.GetAxis("Mouse X") < 0 || Input.GetAxis("Mouse X") > 0)
@@ -95,6 +102,8 @@ public class MainMenu : MonoBehaviour {
             {
                 if (item.activated)
                 {
+                    if (ind_index != item.index) soundmanager.MouseOver();
+
                     ind_index = item.index;
                     for (int i = 0; i <= 2; i++)
                     {

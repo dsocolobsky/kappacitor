@@ -39,6 +39,7 @@ public class Enemy : MonoBehaviour
     Vector3 direction;
 
     public GameObject smoke;
+    AudioSource source;
 
     // Use this for initialization
     void Start()
@@ -47,6 +48,8 @@ public class Enemy : MonoBehaviour
         wander = GetComponent<Wander>();
         score = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
         direction = new Vector3();
+        source = gameObject.GetComponent<AudioSource>();
+        source.volume = PlayerPrefs.GetFloat("sound_volume");
     }
 
     // Update is called once per frame
@@ -114,6 +117,7 @@ public class Enemy : MonoBehaviour
             // Comprobar si el capacitor murio
             if (hitponts <= 0)
             {
+                source.Play();
                 changeState(State.DYING);
             }
         }

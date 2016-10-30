@@ -12,6 +12,8 @@ public class AudioMenu : MonoBehaviour
     float music_volume;
     float sound_volume;
 
+    SoundManager soundmanager;
+
     // Use this for initialization
     void Start()
     {
@@ -39,7 +41,9 @@ public class AudioMenu : MonoBehaviour
         sound_volume = PlayerPrefs.GetFloat("sound_volume");
 
         setBarritaScale(0, music_volume);
-        setBarritaScale(1, sound_volume);        
+        setBarritaScale(1, sound_volume);
+
+        soundmanager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -47,6 +51,8 @@ public class AudioMenu : MonoBehaviour
     {
         if ((Input.GetButtonDown("Submit") || Input.GetMouseButtonDown(0)) && ind_index == 2)
         {
+            soundmanager.Selected();
+
             music_volume = sanitize(barritas[0].transform.localScale.x);
             sound_volume = sanitize(barritas[1].transform.localScale.x);
 
@@ -105,6 +111,7 @@ public class AudioMenu : MonoBehaviour
                 }
             }
 
+            soundmanager.MouseOver();
         }
 
         if (Input.GetAxis("Mouse X") < 0 || Input.GetAxis("Mouse X") > 0)
@@ -113,6 +120,8 @@ public class AudioMenu : MonoBehaviour
             {
                 if (item.activated)
                 {
+                    if (ind_index != item.index) soundmanager.MouseOver();
+
                     ind_index = item.index;
                     for (int i = 0; i <= 2; i++)
                     {

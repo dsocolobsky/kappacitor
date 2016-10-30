@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     public AudioClip minimize;
     public AudioClip maximize;
 
+    public AudioClip hitsound;
+    public AudioClip pickup;
+
     new CameraScript camera;
 
     Animator animator;
@@ -205,6 +208,7 @@ public class Player : MonoBehaviour
                 break;
         }
 
+        playSound(pickup);
         lifebar.Change(hitpoints);
         return true;
     }
@@ -290,6 +294,8 @@ public class Player : MonoBehaviour
 
     public void Damage(int hit, int enemy)
     {
+        playSound(hitsound);
+
         GetComponent<TurnRed>().Execute();
 
         hitpoints -= hit;
@@ -297,6 +303,8 @@ public class Player : MonoBehaviour
 
         if (hitpoints <= 0)
         {
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().Dead();
+
             Text score = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
             PlayerPrefs.SetString("score", score.text);
             int scoren = int.Parse(score.text);

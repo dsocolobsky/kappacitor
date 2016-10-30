@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class Reward : MonoBehaviour
 {
-
     Text scoretxt;
     public GameObject escudo;
     public GameObject media;

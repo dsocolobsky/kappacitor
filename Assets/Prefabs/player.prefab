@@ -37,7 +37,7 @@ GameObject:
   - 81: {fileID: 8118818}
   - 114: {fileID: 11495992}
   - 95: {fileID: 9555602}
-  - 114: {fileID: 11430394}
+  - 114: {fileID: 11417316}
   m_Layer: 10
   m_Name: camera
   m_TagString: MainCamera
@@ -405,6 +405,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11417316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f2e365002dc56439f0f1d4261a2087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursors:
+  - {fileID: 2800000, guid: 95493ca2287d5914ca0a7605b5fce923, type: 3}
+  - {fileID: 2800000, guid: 40752107c2dfc0548bf68b93257adc94, type: 3}
+  - {fileID: 2800000, guid: 23a339f96081ab54ebd993a4f9453158, type: 3}
+  - {fileID: 2800000, guid: 5f0b855a1224a7543b1d4133fae43be9, type: 3}
+  - {fileID: 2800000, guid: 6c47617cc1523af4b99b285a99649337, type: 3}
+  - {fileID: 2800000, guid: 13934e46610e5b748ac9b6932c7ee989, type: 3}
+  - {fileID: 2800000, guid: 1a57a235882fca6458bc69bf4963e43f, type: 3}
+  - {fileID: 2800000, guid: b126bdf497f74374f9002fcc80a124ca, type: 3}
+  cursorMode: 0
+  menu: 0
 --- !u!114 &11419086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -450,20 +472,11 @@ MonoBehaviour:
   hitpoints: 6
   minimize: {fileID: 8300000, guid: 9ee31e1efb57e7c4aa1bbd8dae5a8d8e, type: 3}
   maximize: {fileID: 8300000, guid: 1309120feddeffb41b331d569bb658c7, type: 3}
+  hitsound: {fileID: 8300000, guid: 03eb7f38ff4ea0f4eb52e4ac2ec0fb56, type: 3}
+  pickup: {fileID: 8300000, guid: 17f1ac6fbdf8b31429fca9479c6c8c09, type: 3}
   state: 0
   dashState: 0
   dashCooldown: 6
---- !u!114 &11430394
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c517ffb7fa31874087e276c786fb1aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11433092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -486,8 +499,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f2e365002dc56439f0f1d4261a2087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: 56021cac1eddf754590d6cef318a6a5d, type: 3}
+  cursors: []
   cursorMode: 1
+  menu: 0
 --- !u!124 &12463590
 Behaviour:
   m_ObjectHideFlags: 1

@@ -11,11 +11,10 @@ public class DroppeableItem : MonoBehaviour {
     }
 
     public Type type;
-
     Player player;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 	}
 	

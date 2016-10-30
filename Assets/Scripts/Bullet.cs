@@ -30,6 +30,7 @@ public class Bullet : MonoBehaviour
         direction.z = 0;
 
         audioSource = GetComponent<AudioSource>();
+        audioSource.clip = hitSound;
         audioSource.volume = PlayerPrefs.GetFloat("sound_volume");
     }
 
@@ -64,11 +65,15 @@ public class Bullet : MonoBehaviour
     // Si la bala colisiona con algo, comenzar a destruirla
     void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.tag == "enemy")
+        {
+            audioSource.Play();
+        }
+
         if (col.gameObject.tag != "drop" && col.gameObject.tag != "explosion")
         {
             doDestroy = true;
             GetComponent<SpriteRenderer>().sprite = exploded;
-            audioSource.Play(0);
         }
     }
 }
