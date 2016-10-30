@@ -72,6 +72,7 @@ public class Player : MonoBehaviour
     float slowTimer;
 
     GameObject cargador_hud;
+    SoundManager soundManager;
 
     // Use this for initialization
     void Start()
@@ -84,6 +85,7 @@ public class Player : MonoBehaviour
         savedSpeed = speed;
         GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("sound_volume");
         cargador_hud = gameObject.transform.GetChild(2).gameObject;
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -306,7 +308,8 @@ public class Player : MonoBehaviour
 
         if (hitpoints <= 0)
         {
-            GameObject.Find("SoundManager").GetComponent<SoundManager>().Dead();
+            if(soundManager != null)
+                soundManager.Dead();
 
             Text score = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
             PlayerPrefs.SetString("score", score.text);
