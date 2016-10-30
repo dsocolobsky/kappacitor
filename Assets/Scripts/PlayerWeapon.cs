@@ -12,6 +12,8 @@ public class PlayerWeapon : Shooting {
 
     AudioSource audioSource;
 
+    Player player;
+
 	// Use this for initialization
 	void Start () {
         if (cargadorObject != null)
@@ -24,6 +26,8 @@ public class PlayerWeapon : Shooting {
         {
             audioSource.volume = PlayerPrefs.GetFloat("sound_volume");
         }
+
+        player = GetComponentInParent<Player>();
 	}
 
     public new bool Shoot()
@@ -53,17 +57,20 @@ public class PlayerWeapon : Shooting {
                 cargador.Reload();
                 reloadTimer = 0.0f;
                 recargando = false;
+                player.ShowCargadorHud(false);
             }
         }
         
-        if (Input.GetKeyDown(KeyCode.R) && !recargando && cargador.actualBalas < 6)
+        if ((Input.GetKeyDown(KeyCode.R) && !recargando && cargador.actualBalas < 6) ||
+            cargador.actualBalas < 1)
         {
             recargando = true;
+            player.ShowCargadorHud(true);
         }
 
         if (cargador.actualBalas < 1)
         {
-            recargando = true;    
+            recargando = true;
         }
     }
 }

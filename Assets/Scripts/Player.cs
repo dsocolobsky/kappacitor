@@ -326,4 +326,9 @@ public class Player : MonoBehaviour
         slowTime = time;
         slowed = true;
     }
+
+    public void ShowCargadorHud(bool show)
+    {
+        gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().enabled = show;
+    }
 }

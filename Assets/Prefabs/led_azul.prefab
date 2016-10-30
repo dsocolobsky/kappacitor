@@ -124,7 +124,7 @@ MonoBehaviour:
   escudo: {fileID: 132838, guid: d7429433fdc77d242b972ab5afdf0dec, type: 2}
   media: {fileID: 161698, guid: bdb79ffd56e0e3c4490836a76f391af7, type: 2}
   full: {fileID: 187726, guid: 6c1351a7049ea8f4fa33285847445d88, type: 2}
-  chance: 10
+  chance: 5
   score: 100
 --- !u!114 &11438488
 MonoBehaviour:
