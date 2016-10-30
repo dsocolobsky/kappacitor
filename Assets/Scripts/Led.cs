@@ -40,6 +40,7 @@ public class Led : MonoBehaviour
         changeAnimation = GetComponent<ChangeLedAnimation>();
         target = new Vector3();
         score = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
+        circleRadius = 0.5f;
     }
 
     void FixedUpdate()
@@ -77,7 +78,7 @@ public class Led : MonoBehaviour
 
         // TODO: Explotar
         float distance = Vector3.Distance(player.transform.position, transform.position);
-        if (distance < 0.2f && state == State.MOVING)
+        if (distance < 0.45f && state == State.MOVING)
         {
             state = State.ATTACKING;
         }
@@ -110,14 +111,10 @@ public class Led : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = new Color(1, 0, 0, 0.25f);
-        //Gizmos.DrawSphere(player.transform.position, circleRadius);
-        Gizmos.color = new Color(0, 1, 0, 0.25f);
-        Gizmos.DrawSphere(target, circleRadius * 0.05f);
-        Gizmos.color = detectedPlayer ? Color.red : Color.cyan;
-
-        if (player)
-            Gizmos.DrawRay(transform.position, player.transform.position - transform.position);
+        Gizmos.color = new Color(0, 1, 1, 0.5f);
+        Gizmos.DrawSphere(transform.position, circleRadius);
+        Gizmos.color = new Color(1, 1, 0, 0.5f);
+        Gizmos.DrawSphere(player.transform.position, circleRadius*2);
     }
 
     public Vector3 getDirection()
@@ -152,7 +149,7 @@ public class Led : MonoBehaviour
     Vector3 newTarget()
     {
         Vector3 target = new Vector3();
-        target = Random.insideUnitCircle * circleRadius + new Vector2(player.transform.position.x, player.transform.position.y);
+        target = Random.insideUnitCircle * circleRadius*2 + new Vector2(player.transform.position.x, player.transform.position.y);
 
         return target;
     }
@@ -160,7 +157,7 @@ public class Led : MonoBehaviour
     Vector3 newSeparateTarget()
     {
         Vector3 target = new Vector3();
-        target = Random.insideUnitCircle * circleRadius/2 + new Vector2(transform.position.x, transform.position.y);
+        target = Random.insideUnitCircle * circleRadius + new Vector2(transform.position.x, transform.position.y);
 
         return target;
     }
