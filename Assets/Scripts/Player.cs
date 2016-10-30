@@ -72,6 +72,7 @@ public class Player : MonoBehaviour
     float slowTimer;
 
     GameObject cargador_hud;
+    GameObject clock;
     SoundManager soundManager;
 
     // Use this for initialization
@@ -85,6 +86,7 @@ public class Player : MonoBehaviour
         savedSpeed = speed;
         GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("sound_volume");
         cargador_hud = gameObject.transform.GetChild(2).gameObject;
+        clock = gameObject.transform.GetChild(3).gameObject;
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
     }
 
@@ -134,6 +136,7 @@ public class Player : MonoBehaviour
                 speed = savedSpeed;
                 slowTimer = 0.0f;
                 slowed = false;
+                ShowClock(false);
             }
         }
     }
@@ -301,7 +304,8 @@ public class Player : MonoBehaviour
     {
         playSound(hitsound);
 
-        GetComponent<TurnRed>().Execute();
+        if (!slowed)
+            GetComponent<TurnRed>().Execute();
 
         hitpoints -= hit;
         lifebar.Change(hitpoints);
@@ -331,6 +335,7 @@ public class Player : MonoBehaviour
         speed = speed * 0.5f;
         slowTime = time;
         slowed = true;
+        ShowClock(true);
     }
 
     public void ShowCargadorHud(bool show)
@@ -345,5 +350,19 @@ public class Player : MonoBehaviour
         }
 
         gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().enabled = show;
+    }
+
+    public void ShowClock(bool show)
+    {
+        if (!show)
+        {
+            clock.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f);
+        }
+        else
+        {
+            clock.GetComponent<SpriteRenderer>().enabled = true;
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(0.3f, 0.3f, 0.9f);
+        }
     }
 }
