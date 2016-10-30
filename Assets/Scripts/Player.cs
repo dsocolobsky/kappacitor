@@ -71,6 +71,8 @@ public class Player : MonoBehaviour
     float slowTime;
     float slowTimer;
 
+    GameObject cargador_hud;
+
     // Use this for initialization
     void Start()
     {
@@ -81,6 +83,7 @@ public class Player : MonoBehaviour
         previousAnimation = "player_idle";
         savedSpeed = speed;
         GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("sound_volume");
+        cargador_hud = gameObject.transform.GetChild(2).gameObject;
     }
 
     // Update is called once per frame
@@ -329,6 +332,15 @@ public class Player : MonoBehaviour
 
     public void ShowCargadorHud(bool show)
     {
+        if (!show)
+        {
+            cargador_hud.GetComponent<Animator>().Rebind();
+        }
+        else
+        {
+            cargador_hud.GetComponent<Animator>().Play("cargador_hud");
+        }
+
         gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().enabled = show;
     }
 }
