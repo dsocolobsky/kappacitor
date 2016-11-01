@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
     float horizontal = 0.0f;
     float vertical = 0.0f;
 
+    PlayerGhost ghost;
+
     public enum State
     {
         Idle,
@@ -75,6 +77,9 @@ public class Player : MonoBehaviour
     GameObject clock;
     SoundManager soundManager;
 
+    public PlayerGhost ghostPrefab;
+    bool dying;
+
     // Use this for initialization
     void Start()
     {
@@ -88,11 +93,15 @@ public class Player : MonoBehaviour
         cargador_hud = gameObject.transform.GetChild(2).gameObject;
         clock = gameObject.transform.GetChild(3).gameObject;
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+        dying = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (dying)
+            return;
+
         if (!reallyDashing())
         {
             horizontal = Input.GetAxisRaw("Horizontal");
@@ -249,6 +258,9 @@ public class Player : MonoBehaviour
 
     public void calculateAngle()
     {
+        if (dying)
+            return;
+
         float angle = getAngle();
 
         bool isUp = angle > topMin && angle < topMax;
@@ -315,18 +327,14 @@ public class Player : MonoBehaviour
             if(soundManager != null)
                 soundManager.Dead();
 
-            Text score = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
-            PlayerPrefs.SetString("score", score.text);
-            int scoren = int.Parse(score.text);
-
-            if (PlayerPrefs.GetInt("highscore", 0) < scoren)
+            ghost = (PlayerGhost)Instantiate(ghostPrefab, this.transform.position, Quaternion.identity);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            foreach (SpriteRenderer spr in gameObject.GetComponentsInChildren<SpriteRenderer>())
             {
-                PlayerPrefs.SetInt("highscore", scoren);
+                spr.enabled = false;
             }
-
-            PlayerPrefs.SetInt("deadby", enemy);
-
-            SceneManager.LoadScene("Scenes/dead");
+            ghost.Activate(enemy);
+            dying = true;
         }
     }
 
