@@ -200,7 +200,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "enemybullet" && !reallyDashing())
+        if (col.gameObject.tag == "enemybullet" && !reallyDashing() && !dying)
         {
             Damage(1, 1);
         }
