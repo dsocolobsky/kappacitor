@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
 
     Vector3 direction;
 
-    public GameObject smoke;
+    public CapacitorGhost ghost;
     AudioSource source;
 
     // Use this for initialization
@@ -80,16 +80,6 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        if (state == State.DYING)
-        {
-            deathTimer += Time.deltaTime;
-            if (deathTimer > deathTime)
-            {
-                Destroy(this.gameObject);
-                Instantiate(smoke, this.transform.position, Quaternion.identity);
-            }
-        }
-
         if (state != State.DYING && onCooldown)
         {
             attackCooldownTimer += Time.deltaTime;
@@ -118,7 +108,9 @@ public class Enemy : MonoBehaviour
             if (hitponts <= 0)
             {
                 source.Play();
-                changeState(State.DYING);
+                var g = Instantiate(ghost, transform.position, Quaternion.identity) as CapacitorGhost;
+                g.Set(changeAnimation.ReturnDirection(direction.x, direction.y));
+                Destroy(this.gameObject);
             }
         }
     }

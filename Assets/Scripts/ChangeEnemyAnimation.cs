@@ -24,46 +24,52 @@ public class ChangeEnemyAnimation : ChangeAnimation
 
     new public void Change(float horizontal, float vertical)
     {
+        play(ReturnDirection(horizontal, vertical));
+    }
+
+    public string ReturnDirection(float horizontal, float vertical)
+    {
         if (vertical == -1)
         {
             if (horizontal == -1)
             {
-                play("downleft");
+                return "downleft";
             }
             else if (horizontal == 1)
             {
-                play("downright");
+                return "downright";
             }
             else {
-                play("down");
+                return "down";
             }
         }
         else if (vertical == 1)
         {
             if (horizontal == -1)
             {
-                play("upleft");
+                return "upleft";
             }
             else if (horizontal == 1)
             {
-                play("upright");
+                return "upright";
             }
             else {
-                play("up");
+                return "up";
             }
         }
         else
         {
             if (horizontal == -1)
             {
-                play("upleft");
+                return "upleft";
             }
             else if (horizontal == 1)
             {
-                play("upright");
+                return "upright";
             }
         }
 
+        return "";
     }
 
     // Seleccionar la animacion dependiendo del estado

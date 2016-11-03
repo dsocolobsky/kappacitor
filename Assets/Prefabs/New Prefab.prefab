@@ -1,45 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &169352
+--- !u!1 &168296
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 469484}
-  - 212: {fileID: 21237856}
-  - 114: {fileID: 11464444}
-  - 95: {fileID: 9540898}
-  m_Layer: 15
-  m_Name: smoke
+  - 4: {fileID: 426502}
+  - 212: {fileID: 21235998}
+  - 95: {fileID: 9559288}
+  - 114: {fileID: 11439790}
+  m_Layer: 0
+  m_Name: New Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &469484
+--- !u!4 &426502
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169352}
+  m_GameObject: {fileID: 168296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.7286415, y: -1.2848203, z: 0}
+  m_LocalPosition: {x: 1.2833878, y: 0.035297975, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!95 &9540898
+--- !u!95 &9559288
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169352}
+  m_GameObject: {fileID: 168296}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9359f132adaaf9942a40d18589babf42, type: 2}
+  m_Controller: {fileID: 9100000, guid: ca470f616ea8f6349b93f0b9bc7596f4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -47,23 +47,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11464444
+--- !u!114 &11439790
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169352}
+  m_GameObject: {fileID: 168296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 179def29d45ef694da13f6ff2f9f11e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 517d89667ca0c4a40aab95c29c7f0fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &21237856
+--- !u!212 &21235998
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169352}
+  m_GameObject: {fileID: 168296}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1461244103
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c6a96b64bf841d248b91a5ffef0f2857, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 0896d7013269e2247a0a7789a7d24a37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,5 +97,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 169352}
+  m_RootGameObject: {fileID: 168296}
   m_IsPrefabParent: 1
