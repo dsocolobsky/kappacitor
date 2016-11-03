@@ -11,10 +11,13 @@ public class Reward : MonoBehaviour
     public int chance;
     public int score;
 
+    public SpawnMaster spawnmaster;
+
     // Use this for initialization
     void Start()
     {
         scoretxt = GameObject.FindGameObjectWithTag("score").GetComponent<Text>();
+        spawnmaster = GameObject.Find("spawnmaster").GetComponent<SpawnMaster>();
     }
 
     // Update is called once per frame
@@ -64,7 +67,11 @@ public class Reward : MonoBehaviour
         intscore += 100;
         scoretxt.text = intscore.ToString();
 
-        //Instantiate(despawn, transform.position, Quaternion.identity);
+        if (intscore % 1000 == 0)
+        {
+            spawnmaster.level = intscore / 1000;
+        }
+
         Drop();
     }
 

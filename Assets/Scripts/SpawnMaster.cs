@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 public class SpawnMaster : MonoBehaviour {
 
-    public int enemies;
+    public int level = 1;
     int numberEnemies;
     GameObject[] spawners;
 
@@ -20,7 +20,7 @@ public class SpawnMaster : MonoBehaviour {
         enemyArray = GameObject.FindGameObjectsWithTag("enemy");
         numberEnemies = enemyArray.Length;
 
-        if (numberEnemies < 1)
+        if (numberEnemies < level)
         {
             GameObject s;
             for (int i = 0; i < 4; i++)
