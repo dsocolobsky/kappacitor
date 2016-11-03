@@ -67,9 +67,9 @@ public class Reward : MonoBehaviour
         intscore += 100;
         scoretxt.text = intscore.ToString();
 
-        if (intscore % 1000 == 0)
+        if (intscore % 2000 == 0)
         {
-            spawnmaster.level = intscore / 1000;
+            spawnmaster.level = (intscore / 2000) + 1;
         }
 
         Drop();
