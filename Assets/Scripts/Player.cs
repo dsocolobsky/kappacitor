@@ -348,14 +348,8 @@ public class Player : MonoBehaviour
 
     public void ShowCargadorHud(bool show)
     {
-        if (!show)
-        {
-            cargador_hud.GetComponent<Animator>().Rebind();
-        }
-        else
-        {
-            cargador_hud.GetComponent<Animator>().Play("cargador_hud");
-        }
+        if (show)
+            cargador_hud.GetComponent<Animator>().Play("cargador_hud", -1, 0f);
 
         gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().enabled = show;
     }
