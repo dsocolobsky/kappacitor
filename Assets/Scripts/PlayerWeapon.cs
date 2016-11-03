@@ -62,15 +62,10 @@ public class PlayerWeapon : Shooting {
         }
         
         if ((Input.GetKeyDown(KeyCode.R) && !recargando && cargador.actualBalas < 6) ||
-            cargador.actualBalas < 1)
+            cargador.actualBalas < 1 && !recargando)
         {
             recargando = true;
             player.ShowCargadorHud(true);
-        }
-
-        if (cargador.actualBalas < 1)
-        {
-            recargando = true;
         }
     }
 }
