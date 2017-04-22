@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public GameObject lifebarObject;
     Lifebar lifebar;
     PlayerWeapon gunScript;
+    ShieldScript shield;
 
     public float speed;
     float savedSpeed;
@@ -33,7 +34,8 @@ public class Player : MonoBehaviour
     {
         Idle,
         Moving,
-        Dashing
+        Dashing,
+        Shielding
     }
 
     public enum DashState
@@ -85,6 +87,7 @@ public class Player : MonoBehaviour
     {
         lifebar = lifebarObject.GetComponent<Lifebar>();
         gunScript = transform.Find("gun").gameObject.GetComponent<PlayerWeapon>();
+        shield = transform.Find("rotation").transform.Find("shield").gameObject.GetComponent<ShieldScript>();
         camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
         animator = GetComponent<Animator>();
         previousAnimation = "player_idle";
@@ -112,11 +115,19 @@ public class Player : MonoBehaviour
         Vector3 move = new Vector3(horizontal, vertical, 0);
         transform.position += move * speed * Time.deltaTime;
 
-        if (Input.GetButton("Fire1") && !reallyDashing())
+        if (Input.GetButton("Fire1") && !reallyDashing() && state != State.Shielding)
         {
             bool shot = gunScript.Shoot();
             if (shot)
                 camera.StartShaking();
+        }
+
+        if (Input.GetMouseButtonDown(1) && !reallyDashing())
+        {
+            switchState(State.Shielding);
+        } else if (Input.GetMouseButtonUp(1) && state == State.Shielding && !shield.isDeleted)
+        {
+            switchState(State.Idle);
         }
 
         switch (dashState)
@@ -184,6 +195,10 @@ public class Player : MonoBehaviour
 
         switch (state)
         {
+            case State.Shielding:
+                shield.Enable();
+                gunScript.GetComponentInParent<SpriteRenderer>().enabled = false;
+                break;
             case State.Dashing:
                 gunScript.GetComponentInParent<SpriteRenderer>().enabled = false;
                 horizontal = Input.GetAxisRaw("Horizontal");
@@ -192,6 +207,7 @@ public class Player : MonoBehaviour
                 break;
             case State.Idle:
             case State.Moving:
+                shield.Disable();
                 gunScript.GetComponentInParent<SpriteRenderer>().enabled = true;
                 break;
         }
